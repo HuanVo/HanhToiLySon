@@ -1,10 +1,3 @@
-<!--<div id="breadcrumb">
-        <ol class="breadcrumb container">
-                            <li><a href=""><span><i class="fa fa-home"></i></span></a></li>
-                            <li><a href=""><span>Sản phẩm</span></a></li>
-                            <li><a href=""><span>Món chính</span></a></li>
-                    </ol>
-    </div>-->
 
 <section id="sidebar-main" class="col-sm-8">
 <div id="content">
