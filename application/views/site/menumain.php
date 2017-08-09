@@ -41,7 +41,7 @@
                                                                             <span class="menu-title ">Sản Phẩm</span>
                                                                             <b class="caret"></b>
                                                                         </a>
-                                                                        <div class="dropdown-menu level1 "  style="background: #b39770; margin: 0px;">
+                                                                        <div class="dropdown-menu level1 "  style="background: #b39770; margin: 0px; ">
                                                                             <div class="dropdown-menu-inner" >
                                                                                 <div class="row">
                                                                                     <div class="mega-col " data-type="menu">
@@ -52,7 +52,7 @@
                                                                                                      <?php  foreach ($catalog_list as $row): ?>
                                                                                                      <li >
                                                                                                             <a href="<?php echo base_url('san-pham/danh-muc/'.seoname($row->name).'/'.$row->id_catalog); ?>" target="_self">
-                                                                                                                <span    ><table style="  padding-left: 20px;"><td style="width:120px;color: white;"><?php echo'<b>'. $row->name.'</b>'; ?></td><td><b class="fa fa-angle-right"></b></td></table></span>
+                                                                                                                <span    ><table style="  padding-left: 20px;"><td style="width:200px;color: white;"><?php echo  $row->name ; ?></td><td style="width:20px;"><b class="fa fa-angle-right"></b></td></table></span>
                                                                                                             </a>
                                                                                                          <ul class="sub sub_menu1 " > 
                                                                                                                 <?php foreach ($row->subs as $subs){ ?>

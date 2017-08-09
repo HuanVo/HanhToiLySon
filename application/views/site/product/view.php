@@ -13,23 +13,27 @@
                 <div class="product-info">
                     <div class="row">
                         <!--slider-->
-                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 image-container">
+                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-11 image-container">
                             <div class="image">
                                 <a href="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" class="imagezoom">
-                                <img itemprop="image" src="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" title="<?php echo $product_info->name; ?>" alt="<?php echo $product_info->name; ?>" id="image" data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" class="product-image-zoom img-responsive">
+                                <img class="demo1" id="mainImage" itemprop="image" src="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" title="<?php echo $product_info->name; ?>" alt="<?php echo $product_info->name; ?>" id="image" data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" class="product-image-zoom img-responsive">
                                 </a>
                             </div>
-                            <div class="thumbs-preview">
+                            <div class="thumbs-preview ">
                                 <div class="image-additional slide carousel horical" id="image-additional">
                                     <div id="image-additional-carousel" class="carousel-inner">
                                         <?php $image_list = json_decode($product_info->image_list) ?>
                                         <?php if(is_array($image_list)){ ?>
-                                        <div class="item clearfix active">
-                                            <?php foreach ($image_list as $img): ?>
-                                            <a href="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" title="<?php echo $product_info->name; ?>" class="imagezoom" data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" data-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>">
-                                                <img src="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" style="max-width:82px" title="<?php echo $product_info->name; ?>" alt="<?php echo $product_info->name; ?>" data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" class="product-image-zoom img-responsive">
-                                            </a>
+                                        <div class="item clearfix active " id="divId" onclick="changeImageOnClick(event)">
+                                            <?php foreach ($image_list as $img):                ?>
+                                            <!--<a href="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" title="<?php echo $product_info->name; ?>" class="imagezoom" data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" data-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>">-->
+                                                <img src="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>
+                                                     " style="max-width:62px;padding: 5px;" title="<?php echo $product_info->name; ?>" alt="<?php echo $product_info->name; ?>
+                                                     " data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" class="fl product-image-zoom img-responsive">
+                                        
+                                                <!--</a>-->
                                             <?php endforeach; ?>
+                                      
                                         </div>
                                          <?php } ?>
                                     </div>
@@ -310,5 +314,47 @@ echo 'Liên hệ để có giá tốt.';} ?> <br>
   js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.10&appId=1274686669321313";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
+
+</script>
+<script type="text/javascript">
+//<=!=[=C=D=A=T=A=[
+if (top.location != self.location)
+{top.location = self.location}
+var _gaq=_gaq||[];_gaq.push(["_setAccount","UA-18506635-11"]);
+_gaq.push(["_setDomainName",".nl-mus.blogspot.com"]);_gaq.push(["_trackPageview"]);
+(function(){var a=document.createElement("script");a.type="text/javascript";a.async=true;a.
+src=("https:"==document.location.protocol?"https://ssl":"http://www")+".google-analytics.com/ga.js";
+var b=document.getElementsByTagName("script")[0];b.parentNode.insertBefore(a,b)})();
+//]=]=>
 </script>
 </section>
+ <script type="text/javascript">
+
+        var images = document.getElementById("divId")
+                             .getElementsByTagName("img");
+
+        for (var i = 0; i < images.length; i++)
+        {
+            images[i].onmouseover = function ()
+            {
+                this.style.cursor = 'hand';
+                this.style.borderColor = 'red';
+            }
+            images[i].onmouseout = function ()
+            {
+                this.style.cursor = 'pointer';
+                this.style.borderColor = 'grey';
+            }
+        }
+
+        function changeImageOnClick(event)
+        {
+            event = event || window.event;
+            var targetElement = event.target || event.srcElement;
+
+            if (targetElement.tagName == "IMG")
+            {
+                mainImage.src = targetElement.getAttribute("src");
+            }
+        }
+        </script>

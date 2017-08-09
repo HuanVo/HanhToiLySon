@@ -8,7 +8,7 @@
 
 <div class="layerslider-wrapper" style="max-width:870px;">
         <div class="bannercontainer banner-boxed"
-         style="padding: ;margin: ;">
+         >
         <div id="sliderlayer317700131" class="rev_slider boxedbanner"
              style="width:100%;height:447px; ">
             <ul>

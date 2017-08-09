@@ -5138,8 +5138,10 @@ body.modal-open,
   position: relative;
   overflow: hidden;
   width: 100%;
+ 
 }
 .carousel-inner > .item {
+  
   display: none;
   position: relative;
   -webkit-transition: 0.6s ease-in-out left;
@@ -5156,6 +5158,7 @@ body.modal-open,
 .carousel-inner > .next,
 .carousel-inner > .prev {
   display: block;
+  
 }
 .carousel-inner > .active {
   left: 0;
@@ -5306,6 +5309,7 @@ body.modal-open,
 }
 .clearfix:before,
 .clearfix:after {
+    
   content: " ";
   /* 1 */
   display: table;
@@ -5856,7 +5860,7 @@ td.visible-print {
 
 
 #main_menu1 li .sub_menu1{ position: absolute; display: none;
-width: 200px;
+width: 170px;
 background: #b39770;
 top: 0px;
 left: 100%;
@@ -5867,4 +5871,9 @@ left: 100%;
 #main_menu1>li>.sub_menu1{top: 55px;position: absolute;
 left: 0px;}
 #main_menu1 li:hover{  background: #c83a3a;
+}
+.fl{
+    float: left;
+ padding-left: 10px;
+        
 }

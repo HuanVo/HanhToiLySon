@@ -916,6 +916,7 @@ body.layout-boxed-lg #page {
   visibility: hidden !important;
 }
 .sidebar .product-block .pav-colorbox {
+    
   visibility: hidden !important;
 }
 .sidebar .product-block .product-zoom {
@@ -1693,8 +1694,8 @@ body.layout-boxed-lg #page {
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
-  top: 0;
-  left: 0;
+  top:5px;
+  left: 5px;
   height: 0;
   line-height: 8px;
   width: 0;
@@ -2235,6 +2236,8 @@ ul.box-filter span {
   clear: both;
   overflow: hidden;
   padding: 0 25px;
+  
+ 
 }
 .product-info .image-additional a {
   float: left;
@@ -3788,3 +3791,18 @@ body,
   margin-left: 4px;
   margin-bottom: 3px;
 }
+.demo1{
+-moz-transition: all .5s ease-in-out;
+-webkit-transition: all .5s ease-in-out;
+}
+.demo1:hover{
+moz-transform: scale(1.2) rotate(0deg);
+-webkit-transform: scale(1.2) rotate(0deg);
+position: relative;
+cursor: pointer;}
+ .imgStyle
+        {
+            width:100px;
+            height:100px;
+            border:3px solid grey;
+        }

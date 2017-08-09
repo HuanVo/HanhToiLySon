@@ -30,7 +30,7 @@
                                                 <i class="fa fa-search-plus" ></i>
                                             </a>
                                             <!-- view-->
-                                            <a class="pav-colorbox cboxElement" href="<?php echo base_url('chi-tiet-san-pham/'.seoname($prod->name_catalog).'/'.seoname($prod->name).'/'.$prod->id_product) ?>" title="Xem">
+                                            <a class="pav-colorbox cboxElement"  href="<?php echo base_url('chi-tiet-san-pham/'.seoname($prod->name_catalog).'/'.seoname($prod->name).'/'.$prod->id_product) ?>" title="Xem">
                                                 <span>Xem</span>
                                             </a>
                                         </div>
@@ -100,7 +100,7 @@
                                                 <i class="fa fa-search-plus"></i>
                                             </a>
                                             <!-- view-->
-                                            <a class="pav-colorbox cboxElement" href="<?php echo base_url('chi-tiet-san-pham/'.seoname($prod->name_catalog).'/'.seoname($prod->name).'/'.$prod->id_product) ?>" title="Xem">
+                                            <a class="pav-colorbox cboxElement"  href="<?php echo base_url('chi-tiet-san-pham/'.seoname($prod->name_catalog).'/'.seoname($prod->name).'/'.$prod->id_product) ?>" title="Xem">
                                                 <span>Xem</span>
                                             </a>
                                         </div>
