@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo public_url(); ?>/admin/crown/css/main.css" />
 <link rel="stylesheet" type="text/css" href="<?php echo public_url(); ?>/admin/css/css.css" media="screen" />
 
-
+<base href="<?php echo base_url(); ?>">
 <script type="text/javascript">
     var admin_url 	= '';
     var base_url 	= '';
@@ -42,7 +42,7 @@
 <script type="text/javascript" src="<?php echo public_url(); ?>/admin/crown/js/custom.js"></script>
 
 
-<script type="text/javascript" src="<?php echo public_url(); ?>/js/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src="<?php echo public_url(); ?>/ckeditor/ckeditor.js"></script>
 <script type="text/javascript" src="<?php echo public_url(); ?>/js/jquery/chosen/chosen.jquery.min.js"></script>
 <script type="text/javascript" src="<?php echo public_url(); ?>/js/jquery/scrollTo/jquery.scrollTo.js"></script>
 <script type="text/javascript" src="<?php echo public_url(); ?>/js/jquery/number/jquery.number.min.js"></script>

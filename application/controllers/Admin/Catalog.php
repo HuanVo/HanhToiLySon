@@ -20,9 +20,6 @@
             }
 
             $this->data['list'] = $catalog_list;
-
-
-
             // lay ra noi dung thong bao message
             $message = $this->session->flashdata('message');
             $this->data['message'] = $message;

@@ -64,7 +64,7 @@ class MY_Controller extends CI_Controller{
 
                 $this->data['catalog_list'] = $catalog_list;
                 $catalog = $this->uri->rsegment('3');
-                // lay thong tin tanh muc
+                // lay thong tin danh muc
                 $input = array();
                 $input['where'] = array(
                     'id_catalog' => $catalog,
@@ -76,8 +76,15 @@ class MY_Controller extends CI_Controller{
                 $product_info =  $this->product_model->get_info($catalog);
                 $this->data['product_info'] = $product_info;
                 
+                // load tin tuc
+                $this->load->model('news_model');
+                $nput['limit'] = array(5,0);
+                $nput['order'] = array('creates','DESC');//DESC asc
+           
+            $news_info =  $this->news_model->get_list($nput);
+                $this->data['news_infos'] = $news_info;
                 
-
+                
                 // load ra thu vien cart
                $this->load->library('cart');
                 $total_items = $this->cart->total_items();
