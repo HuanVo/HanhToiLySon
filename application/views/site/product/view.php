@@ -1,10 +1,3 @@
-<!--<div id="breadcrumb">
-        <ol class="breadcrumb container">
-                            <li><a href=""><span><i class="fa fa-home"></i></span></a></li>
-                            <li><a href=""><span>Sản phẩm</span></a></li>
-                            <li><a href=""><span>Món chính</span></a></li>
-                    </ol>
-    </div>-->
 
 <section id="sidebar-main" class="col-sm-8">
 <div id="content">
@@ -25,14 +18,14 @@
                                         <?php $image_list = json_decode($product_info->image_list) ?>
                                         <?php if(is_array($image_list)){ ?>
                                         <div class="item clearfix active " id="divId" onclick="changeImageOnClick(event)">
-                                            <?php foreach ($image_list as $img):                ?>
-                                            <!--<a href="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" title="<?php echo $product_info->name; ?>" class="imagezoom" data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" data-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>">-->
-                                                <img src="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>
-                                                     " style="max-width:62px;padding: 5px;" title="<?php echo $product_info->name; ?>" alt="<?php echo $product_info->name; ?>
-                                                     " data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" class="fl product-image-zoom img-responsive">
-                                        
-                                                <!--</a>-->
-                                            <?php endforeach; ?>
+                                            <?php $i=0; foreach ($image_list as $img): ?>
+                                                <img src="<?php echo base_url('upload') ?>/products/<?php echo $img ?>
+                                                     "style="max-width:62px;padding: 5px;" title="<?php echo $product_info->name; ?>" alt="<?php echo $product_info->name; ?>
+                                                     "data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $img ?>" class="fl product-image-zoom img-responsive">
+                                              <?php if($i>3)
+                                                {break;}
+                                             $i++;
+                                            endforeach; ?>
                                       
                                         </div>
                                          <?php } ?>

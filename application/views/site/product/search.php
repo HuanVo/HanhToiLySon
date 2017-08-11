@@ -1,12 +1,7 @@
-<div id="breadcrumb">
-        <ol class="breadcrumb container">
-            <li><a href="<?php echo base_url();?>"><span><i class="fa fa-home"></i></span></a></li>
-                <li><a href=""><span>Tìm kiếm</span></a></li>
-        </ol>
-</div>
+
 <section id="sidebar-main" class="col-sm-8">
     <div id="content">
-        <h1>Tìm kiếm - <?php echo isset($key) ? $key : '' ?></h1>
+        <h3>Tìm kiếm - <?php echo isset($key) ? $key : '' ?></h3>
         <label class="control-label" for="input-search">Tiêu chí Tìm kiếm</label>
         <!--Form search-->
         <form class="advanced-search" method="get" action="<?php echo site_url('product/search') ?>">
@@ -61,25 +56,25 @@
                     <div class="sort">
                         <span>Sắp xếp theo:</span>
                             <select class="form-control" onchange="location = this.value;">
-                                <option value="http://foodstore.myzozo.net/search?sort=p.sort_order&amp;order=ASC&amp;search=combo" selected="selected">Mặc định</option>
-                                <option value="http://foodstore.myzozo.net/search?sort=pd.name&amp;order=ASC&amp;search=combo">Tên (A - Z)</option>
-                                <option value="http://foodstore.myzozo.net/search?sort=pd.name&amp;order=DESC&amp;search=combo">Tên (Z - A)</option>
-                                <option value="http://foodstore.myzozo.net/search?sort=p.price&amp;order=ASC&amp;search=combo">Giá (Thấp &gt; Cao)</option>
-                                <option value="http://foodstore.myzozo.net/search?sort=p.price&amp;order=DESC&amp;search=combo">Giá (Cao &gt; Thấp)</option>
-                                <option value="http://foodstore.myzozo.net/search?sort=rating&amp;order=DESC&amp;search=combo">Đánh giá (Cao nhất)</option>
-                                <option value="http://foodstore.myzozo.net/search?sort=rating&amp;order=ASC&amp;search=combo">Đánh giá (Thấp nhất)</option>
-                                <option value="http://foodstore.myzozo.net/search?sort=p.model&amp;order=ASC&amp;search=combo">Dòng sản phẩm (A - Z)</option>
-                                <option value="http://foodstore.myzozo.net/search?sort=p.model&amp;order=DESC&amp;search=combo">Dòng sản phẩm (Z - A)</option>
+                                <option value="" selected="selected">Mặc định</option>  <!-- http://foodstore.myzozo.net/search?sort=p.sort_order&amp;order=ASC&amp;search=combo-->
+                                <option value="#">Tên (A - Z)</option>
+                                <option value="#">Tên (Z - A)</option>
+                                <option value="#">Giá (Thấp &gt; Cao)</option>
+                                <option value="#">Giá (Cao &gt; Thấp)</option>
+                                <option value="#">Đánh giá (Cao nhất)</option>
+                                <option value="#">Đánh giá (Thấp nhất)</option>
+                                <option value="#">Dòng sản phẩm (A - Z)</option>
+                                <option value="#">Dòng sản phẩm (Z - A)</option>
                             </select>
                     </div>
                     <div class="limit">
                         <span>Giới hạn:</span>
-                        <select class="form-control" onchange="location = this.value;">
+                        <select class="form-control" onchange="">
                             <option value="http://foodstore.myzozo.net/search?search=combo&amp;limit=15" selected="selected">15</option>
-                            <option value="http://foodstore.myzozo.net/search?search=combo&amp;limit=25">25</option>
-                            <option value="http://foodstore.myzozo.net/search?search=combo&amp;limit=50">50</option>
-                            <option value="http://foodstore.myzozo.net/search?search=combo&amp;limit=75">75</option>
-                            <option value="http://foodstore.myzozo.net/search?search=combo&amp;limit=100">100</option>
+                            <option value="#">25</option>
+                            <option value="#">50</option>
+                            <option value="#">75</option>
+                            <option value="#">100</option>
                          </select>
                     </div>
 
@@ -154,10 +149,10 @@
     </div>
 </div>
 </div>
-                        <div class="paginations row">
+<!--                        <div class="paginations row">
                             <div class="links"></div>
                             <div class="results">Hiển thị 1 đến 1 của 1 (1 trang)</div>
-                        </div>
+                        </div>-->
                         <!--==========products list=========-->   
    </div>
 </section>

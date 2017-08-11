@@ -134,30 +134,34 @@
             $this->load->helper('form');
             if($this->input->post()){
                 $password = $this->input->post('password');
+               
+                
                 if($password){
-                    $this->form_validation->set_rules('password', 'Nhập password ', 'required|min_length[4]' );
+                    $this->form_validation->set_rules('password', 'Nhập password ', 'required|matches[passconf]|md5' );
+                    $this->form_validation->set_rules('passconf', 'lang:passconf', 'trim|required');
                 }
                 $this->form_validation->set_rules('name', 'Nhập Họ tên ', 'required' );
                 $this->form_validation->set_rules('phone', 'Nhập Số Điện Thoại ', 'required' );
-                $this->form_validation->set_rules('adress', 'Nhập Địa Chỉ', 'required' );
+                $this->form_validation->set_rules('address', 'Nhập Địa Chỉ', 'required' );
+                
                 if($this->form_validation->run()){
                     $name = $this->input->post('name');
                     $phone = $this->input->post('phone');
-                    $adress = $this->input->post('adress');
+                    $address = $this->input->post('address');
                     $data = array();
                     $data = array(
                         'name' => $name,
                         'phone' => $phone,
-                        'adress' => $adress,
+                        'address' => $address,
                     );
                     if($password){
                         $password = md5($password);
                         $data['password'] = $password;
                     }
                     if($this->user_model->update($id_user, $data)){
-                        $this->session->set_flashdata('message_update', 'Cập nhật thành công');
+                        $this->session->set_flashdata('message', 'Cập nhật thành công');
                     }else{
-                        $this->session->set_flashdata('message_update', 'Có lỗi khi cập nhật');
+                        $this->session->set_flashdata('message', 'Có lỗi khi cập nhật');
                     }
                     redirect('user/index');
                 }

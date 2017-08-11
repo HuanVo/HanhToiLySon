@@ -47,9 +47,19 @@
                                 <i class="fa fa-user"></i>
                             </div>
                             <div class="inner-toggle">
+                                <?php if(isset($user_info) && $user_info !=  ''): ?>
+                  
+                                    
+                                        <div class="login links">
+                                            <a href="<?php echo base_url('User/index');?>">Tài khoản</a> -
+                                        <a href="<?php echo site_url('user/logout'); ?>">Thoát</a>
+                                            </div>
+                                    
+                                 <?php else: ?>
                                 <div class="login links">
                                  <a href="">Đăng ký</a> hoặc <a href="">Đăng nhập</a>
                                 </div>
+                                <?php endif; ?>
                             </div>
                         </div>
 
@@ -62,9 +72,9 @@
                                     <li>
                                         <a class="wishlist" href="" id="wishlist-total">
                                             <span class="fa fa-heart"></span>
-                                            Yêu thích (0)                                        </a>
+                                            Yêu thích                                       </a>
                                     </li>
-                                    <li><a class="account" href="">
+                                    <li><a class="account" href="<?php echo base_url('User/index');?>">
                                             <span class="fa fa-user"></span>
                                             Tài khoản                                        </a>
                                     </li>

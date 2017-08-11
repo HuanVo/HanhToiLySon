@@ -1,3 +1,9 @@
+<?php
+$price_from = $this->input->get('price_from');
+$price_to = $this->input->get('price_to');
+
+?>
+
 <aside id="sidebar-left" class="col-sm-2">
         <div id="column-left" class="hidden-xs sidebar">
                               <div class="box category">
@@ -6,15 +12,15 @@
         <div class="box-content">
             <ul class="box-category list">
                  <?php  foreach ($catalog_list as $row): ?>
-                                    <li class="">
-                                                    <a href="<?php echo base_url('san-pham/danh-muc/'.seoname($row->name).'/'.$row->id_catalog); ?>" class=""><?php echo'<b >'. $row->name.'</b>'; ?></a>
-                                    </li>
+                    <li class="">
+                        <a href="<?php echo base_url('san-pham/danh-muc/'.seoname($row->name).'/'.$row->id_catalog); ?>" class=""><?php echo'<b >'. $row->name.'</b>'; ?></a>
+                    </li>
                                    
                  <?php endforeach; ?>
             </ul>
         </div>
     </div>
-                               <div class="box filter">
+    <div class="box filter">
     <div class="box-heading">
         <span>Lọc</span>
         <em class="line"></em>
@@ -24,51 +30,33 @@
                             <li>
                     <span id="filter-group3">Giá Bán</span>
                     <ul class="clearfix">
-                                                    <div id="filter-group3">
-                                                                    <li>
-                                        <input name="filter[]" value="14" id="filter14" type="checkbox">
-                                        <label for="filter14">&gt;100.000đ</label>
-                                    </li>
-                                                            </div>
-                                                    <div id="filter-group3">
-                                                                    <li>
-                                        <input name="filter[]" value="12" id="filter12" type="checkbox">
-                                        <label for="filter12">0 - 50.000đ </label>
-                                    </li>
-                                                            </div>
-                                                    <div id="filter-group3">
-                                                                    <li>
-                                        <input name="filter[]" value="13" id="filter13" type="checkbox">
-                                        <label for="filter13">50.000đ - 100.000đ</label>
-                                    </li>
-                                                            </div>
-                                            </ul>
-                </li>
+                         <form name="search_price" action="<?php echo base_url('product/search_price')?>" method="get" enctype="multipart/form-data">
+                        <div id="filter-group3">
                             <li>
-                    <span id="filter-group4">Màu Sắc</span>
-                    <ul class="clearfix">
-                                                    <div id="filter-group4">
-                                                                    <li>
-                                        <input name="filter[]" value="17" id="filter17" type="checkbox">
-                                        <label for="filter17">Vàng</label>
-                                    </li>
-                                                            </div>
-                                                    <div id="filter-group4">
-                                                                    <li>
-                                        <input name="filter[]" value="15" id="filter15" type="checkbox">
-                                        <label for="filter15">Xanh </label>
-                                    </li>
-                                                            </div>
-                                                    <div id="filter-group4">
-                                                                    <li>
-                                        <input name="filter[]" value="16" id="filter16" type="checkbox">
-                                        <label for="filter16">Đỏ</label>
-                                    </li>
-                                                            </div>
-                                            </ul>
-                </li>
+                                Từ <br/>
+                                <select name="price_from" style="width: 90%;"> 
+                                    <?php for ($i=0;$i <= 5000000;$i = $i + 200000): ?>
+                                        <option <?php echo ($price_from == $i) ? 'selected' : ''; ?> value="<?php echo $i; ?>"><?php echo number_format($i); ?> VND</option>
+                                    <?php endfor; ?>
+                                </select>
+                            </li>
+                        </div>
+                        <div id="filter-group3">
+                            <li>
+                                Đến<br/>
+                                <select name="price_to" style="width: 90%;">
+                                    <?php for ($i=0;$i <= 5000000;$i = $i + 200000): ?>
+                                        <option <?php echo ($price_to == $i) ? 'selected' : ''; ?> value="<?php echo $i; ?>"><?php echo number_format($i); ?> VND</option>
+                                    <?php endfor; ?>
+                                </select>
+                            </li>
+                        </div>
+                             <br/>
+                             <button class="button btn btn-theme-default" type="submit" style="float: left;">Lọc</button>
+                         </form>
                     </ul>
-        <a id="button-filter" class="button btn btn-theme-default">Lọc Tìm kiếm</a>
+                </li>
+            </ul>
     </div>
 </div>                      
     

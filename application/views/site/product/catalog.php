@@ -2,7 +2,7 @@
 <section id="sidebar-main" class="col-sm-8">
 <div id="content">
                 
-                <h1>Món chính</h1>
+                <h3><?php echo $name_catalog.' ( <span style="color: red;">'.$total_rows.'</span> sản phẩm)'; ?></h3>
                 <!--refine-->
                 
                 <!--==========products filter=========-->
@@ -26,14 +26,14 @@
                                     <span>Sắp xếp theo:</span>
                                     <select class="form-control" onchange="location = this.value;">
                                                                       <option value="http://foodstore.myzozo.net/mon-chinh?sort=p.sort_order&amp;order=ASC" selected="selected">Mặc định</option>
-                                                                    <option value="http://foodstore.myzozo.net/mon-chinh?sort=pd.name&amp;order=ASC">Tên (A - Z)</option>
-                                                                   <option value="http://foodstore.myzozo.net/mon-chinh?sort=pd.name&amp;order=DESC">Tên (Z - A)</option>
-                                                                    <option value="http://foodstore.myzozo.net/mon-chinh?sort=p.price&amp;order=ASC">Giá (Thấp &gt; Cao)</option>
-                                                                   <option value="http://foodstore.myzozo.net/mon-chinh?sort=p.price&amp;order=DESC">Giá (Cao &gt; Thấp)</option>
-                                                                    <option value="http://foodstore.myzozo.net/mon-chinh?sort=rating&amp;order=DESC">Đánh giá (Cao nhất)</option>
-                                                                     <option value="http://foodstore.myzozo.net/mon-chinh?sort=rating&amp;order=ASC">Đánh giá (Thấp nhất)</option>
-                                                                    <option value="http://foodstore.myzozo.net/mon-chinh?sort=p.model&amp;order=ASC">Dòng sản phẩm (A - Z)</option>
-                                                                    <option value="http://foodstore.myzozo.net/mon-chinh?sort=p.model&amp;order=DESC">Dòng sản phẩm (Z - A)</option>
+                                                                    <option value="#">Tên (A - Z)</option>
+                                                                   <option value="#">Tên (Z - A)</option>
+                                                                    <option value="#">Giá (Thấp &gt; Cao)</option>
+                                                                   <option value="#">Giá (Cao &gt; Thấp)</option>
+                                                                    <option value="#">Đánh giá (Cao nhất)</option>
+                                                                     <option value="#">Đánh giá (Thấp nhất)</option>
+                                                                    <option value="#">Dòng sản phẩm (A - Z)</option>
+                                                                    <option value="#">Dòng sản phẩm (Z - A)</option>
                                     </select>
                                 </div>
 
@@ -42,9 +42,9 @@
                                     <select class="form-control" onchange="location = this.value;">
                                                                                                                                     <option value="http://foodstore.myzozo.net/mon-chinh?limit=15" selected="selected">15</option>
                                         <option value="http://foodstore.myzozo.net/mon-chinh?limit=25">25</option>
-                                        <option value="http://foodstore.myzozo.net/mon-chinh?limit=50">50</option>
-                                        <option value="http://foodstore.myzozo.net/mon-chinh?limit=75">75</option>
-                                        <option value="http://foodstore.myzozo.net/mon-chinh?limit=100">100</option>
+                                        <option value="">50</option>
+                                        <option value="#">75</option>
+                                        <option value="#">100</option>
                                     </select>
                                 </div>
 
@@ -120,10 +120,10 @@
                            </div>
                         </div>
                     </div>
-                    <div class="paginations row">
+<!--                    <div class="paginations row">
                         <div class="links"></div>
                         <div class="results">Hiển thị 1 đến 3 của 3 (1 trang)</div>
-                    </div>
+                    </div>-->
                     <!--==========products list=========-->
 </div>
     </section>
