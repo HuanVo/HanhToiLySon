@@ -18,12 +18,12 @@
                          <?php $i = 1; foreach ($product_view as $prod){
                     ?>
                                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                    <div class="product-block item-default" itemtype="http://schema.org/Product" itemscope="">
+                                    <div class="product-block item-default image " itemtype="http://schema.org/Product" itemscope="" >
                                         
-                                        <div class="image">
+                                        <div class="image" >
                                             <!-- text sale-->
                                             <a class="img" href="<?php echo base_url('chi-tiet-san-pham/'.seoname($prod->name_catalog).'/'.seoname($prod->name).'/'.$prod->id_product) ?>" >
-                                                <img src="<?php echo base_url('upload'); ?>/products/<?php echo $prod->image_link; ?>" alt="<?php echo $prod->name;?>" class="img-responsive">
+                                                <img  style="height: 216.56px;" src="<?php echo base_url('upload'); ?>/products/<?php echo $prod->image_link; ?>" alt="<?php echo $prod->name;?>" class="img-responsive ">
                                             </a>
                                             <!-- zoom image-->
                                             <a href="<?php echo base_url('upload'); ?>/products/<?php echo $prod->image_link; ?>" class="info-view product-zoom" style="  padding-left: 3px; padding-top: 10px;">

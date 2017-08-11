@@ -6,31 +6,42 @@
                 <div class="product-info">
                     <div class="row">
                         <!--slider-->
-                        <div class="col-lg-5 col-md-5 col-sm-8 col-xs-11 image-container">
-                            <div class="image">
-                                <a href="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" class="imagezoom">
-                                <img class="demo1" id="mainImage" itemprop="image" src="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" title="<?php echo $product_info->name; ?>" alt="<?php echo $product_info->name; ?>" id="image" data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" class="product-image-zoom img-responsive">
-                                </a>
-                            </div>
-                            <div class="thumbs-preview ">
-                                <div class="image-additional slide carousel horical" id="image-additional">
-                                    <div id="image-additional-carousel" class="carousel-inner">
-                                        <?php $image_list = json_decode($product_info->image_list) ?>
-                                        <?php if(is_array($image_list)){ ?>
-                                        <div class="item clearfix active " id="divId" onclick="changeImageOnClick(event)">
-                                            <?php $i=0; foreach ($image_list as $img): ?>
-                                                <img src="<?php echo base_url('upload') ?>/products/<?php echo $img ?>
-                                                     "style="max-width:62px;padding: 5px;" title="<?php echo $product_info->name; ?>" alt="<?php echo $product_info->name; ?>
-                                                     "data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $img ?>" class="fl product-image-zoom img-responsive">
-                                              <?php if($i>3)
+                                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 image-container">
+                                                                    <div class="image">
+
+                                                                                
+                                        <a href="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>"  class="imagezoom">
+                                            <img style="width: 370px;height: 370px;" itemprop="image" src="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" title="<?php echo $product_info->name; ?>"
+                                                 alt="<?php echo $product_info->name; ?>" id="mainImage" data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $product_info->image_link; ?>" class="product-image-zoom img-responsive demo1" />
+                                        </a>
+
+                                    </div>
+                                
+                             <div class="thumbs-preview" >
+                                                                            <div class="image-additional slide carousel horical" id="image-additional" >
+                                            <div id="image-additional-carousel" class="carousel-inner" >
+                           <?php $image_list = json_decode($product_info->image_list) ?>
+                                        <?php if(is_array($image_list)){ ?>                                                                                  
+												
+                                                <div class="item clearfix active" id="divId" onclick="changeImageOnClick(event)" >
+                                                      <?php $i=0; foreach ($image_list as $img): ?>
+                                                   
+                                                        <img src="<?php echo base_url('upload') ?>/products/<?php echo $img ?>"
+                                                           style="width: 62px;height: 62px; " title="<?php echo $product_info->name; ?>" alt="<?php echo $product_info->name; ?>" 
+                                                             data-zoom-image="<?php echo base_url('upload') ?>/products/<?php echo $img ?>" class="fl anh product-image-zoom img-responsive" />
+                                               
+<?php if($i>3)
                                                 {break;}
                                              $i++;
                                             endforeach; ?>
-                                      
-                                        </div>
-                                         <?php } ?>
-                                    </div>
+                                                                                                                                                        
+                                           
+                                                    
+                                                                                                            </div>
+                                                 <?php } ?>
+                                                                                                                                                </div>
 
+      
                                     <!-- Controls -->
                                     <a class="carousel-control left fa fa-angle-left" href="#image-additional" data-slide="prev"></a>
                                     <a class="carousel-control right fa fa-angle-right" href="#image-additional" data-slide="next"></a>

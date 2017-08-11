@@ -56,7 +56,7 @@
                                                                                                             </a>
                                                                                                          <ul class="sub sub_menu1 " > 
                                                                                                                 <?php foreach ($row->subs as $subs){ ?>
-                                                                                                                <li  style="height: 29px;"><a href="<?php echo base_url('san-pham/danh-muc/'.seoname($subs->name).'/'.$subs->id_catalog); ?>" style="color: white; font-size: 15px;"><?php echo ' &nbsp; &nbsp;'.$subs->name; ?></a></li>
+                                                                                                                <li  style="height: 29px; padding: 5px;"> <a href="<?php echo base_url('san-pham/danh-muc/'.seoname($subs->name).'/'.$subs->id_catalog); ?>" style="color: white; font-size: 15px;"><?php echo ' &nbsp; &nbsp;'.$subs->name; ?></a></li>
                                                                                                                 <?php } ?>
                                                                                                          </ul>
                                                                                                         </li>
