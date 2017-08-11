@@ -91,7 +91,6 @@ $this->load->view('admin/news/head', $this->data);
                                         }
                                     );
                                 </script>
-
                                <div class="clear error" name="content_error"><?php echo form_error('content'); ?></div>
                             </div>
                             <div class="clear"></div>
