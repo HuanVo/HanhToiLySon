@@ -22,28 +22,28 @@
                                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 box column">
                                    <div class="box-heading"><span>Thông tin</span></div>
                                    <ul class="list-unstyled">
-                                                                   <li><a href="http://foodstore.myzozo.net/ve-chung-toi">Về Chúng Tôi</a></li>
-                                                                   <li><a href="http://foodstore.myzozo.net/thong-tin-giao-hang">Thông Tin Giao Hàng</a></li>
-                                                                   <li><a href="http://foodstore.myzozo.net/chinh-sach-bao-mat">Chính sách bảo mật</a></li>
-                                                                   <li><a href="http://foodstore.myzozo.net/dieu-khoan-dich-vu">Điều khoản dịch vụ</a></li>
+                                                                   <li><a href="#">Về Chúng Tôi</a></li>
+                                                                   <li><a href="#">Thông Tin Giao Hàng</a></li>
+                                                                   <li><a href="#">Chính sách bảo mật</a></li>
+                                                                   <li><a href="#">Điều khoản dịch vụ</a></li>
                                                            </ul>
                                </div>
                                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 box column">
                                    <div class="box-heading"><span>Dịch vụ</span></div>
                                    <ul class="list-unstyled">
-                                       <li><a href="http://foodstore.myzozo.net/Lien-he">Liên hệ</a></li>
-                                       <li><a href="http://foodstore.myzozo.net/doi-tra-hang">Đổi / Trả hàng</a></li>
-                                       <li><a href="http://foodstore.myzozo.net/index.php?route=information/sitemap">Bản đồ</a></li>
-                                       <li><a href="http://foodstore.myzozo.net/phieu-qua-tang">Phiếu Quà tặng</a></li>
+                                       <li><a href="#">Liên hệ</a></li>
+                                       <li><a href="#">Đổi / Trả hàng</a></li>
+                                       <li><a href="#">Bản đồ</a></li>
+                                       <li><a href="#">Phiếu Quà tặng</a></li>
                                    </ul>
                                </div>
                                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 box column">
                                    <div class="box-heading"><span>Thông tin thêm</span></div>
                                    <ul class="list-unstyled">
-                                       <li><a href="http://foodstore.myzozo.net/thuong-hieu">Thương hiệu</a></li>
-                                       <li><a href="http://foodstore.myzozo.net/phieu-qua-tang">Phiếu Quà tặng</a></li>
-                                       <li><a href="http://foodstore.myzozo.net/index.php?route=affiliate/account">Cộng tác viên</a></li>
-                                       <li><a href="http://foodstore.myzozo.net/khuyen-mai-dac-biet">Sản phẩm Đặc biệt</a></li>
+                                       <li><a href=#">Thương hiệu</a></li>
+                                       <li><a href="#">Phiếu Quà tặng</a></li>
+                                       <li><a href="#">Cộng tác viên</a></li>
+                                       <li><a href="#">Sản phẩm Đặc biệt</a></li>
                                    </ul>
                                </div>
                                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 box column">

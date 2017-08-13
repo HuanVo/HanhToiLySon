@@ -22,12 +22,12 @@
                                         
                                         <div class="image dem">
                                             <!-- text sale-->
-                                            <a class="img" href="<?php echo base_url('chi-tiet-san-pham/'.seoname($prod->name_catalog).'/'.seoname($prod->name).'/'.$prod->id_product) ?>" >
-                                                <img src="<?php echo base_url('upload'); ?>/products/<?php echo $prod->image_link; ?>" alt="<?php echo $prod->name;?>" class="img-responsive">
+                                            <a  class="img " href="<?php echo base_url('chi-tiet-san-pham/'.seoname($prod->name_catalog).'/'.seoname($prod->name).'/'.$prod->id_product) ?>" >
+                                                <img src="<?php echo base_url('upload'); ?>/products/<?php echo $prod->image_link; ?>" alt="<?php echo $prod->name;?>" class=" img-responsive">
                                             </a>
                                             <!-- zoom image-->
                                             <a href="<?php echo base_url('upload'); ?>/products/<?php echo $prod->image_link; ?>" class="info-view product-zoom "style="  padding-left: 3px; padding-top: 10px;" >
-                                                <i class="fa fa-search-plus"></i>
+                                                <i class="fa fa-search-plus "></i>
                                             </a>
                                             <!-- view-->
                                             <a class="pav-colorbox cboxElement" href="<?php echo base_url('chi-tiet-san-pham/'.seoname($prod->name_catalog).'/'.seoname($prod->name).'/'.$prod->id_product);?>" title="Xem">

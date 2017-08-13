@@ -13,13 +13,13 @@
              style="width:100%;height:447px; ">
             <ul>
                 
-                    <li                              data-masterspeed="300"
+                <li                       data-masterspeed="300"
                             data-transition="random"
                             data-slotamount="7"
                             data-thumb="<?php echo base_url('upload'); ?>/Slides/img-slider1.jpg">
 
                         
-                            <img src="<?php echo base_url('upload'); ?>/Slides/img-slider1.jpg" alt="Image 0"/>
+                    <img    src="<?php echo base_url('upload'); ?>/Slides/h_092.jpg" alt="Image 0" />
                         
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
                                                         <div class="caption  randomrotate											easeInOutQuad   easeInOutQuad											"
@@ -28,8 +28,8 @@
                                  data-speed="300"
                                  data-start="365"
                                  data-easing="easeOutExpo"  >
-                                                                    <img src="<?php echo base_url('upload'); ?>/Slides/image5.png"
-                                         alt="<?php echo base_url('upload'); ?>/Slides/image5.png"/>
+                                                                    <!--<img src="<?php echo base_url('upload'); ?>/Slides/image5.png"-->
+                                         <!--alt="<?php echo base_url('upload'); ?>/Slides/image5.png"/>-->
                                 
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
@@ -39,8 +39,8 @@
                                  data-speed="300"
                                  data-start="819"
                                  data-easing="easeOutExpo"  >
-                                                                    <img src="<?php echo base_url('upload'); ?>/Slides/saleoff.png"
-                                         alt="<?php echo base_url('upload'); ?>/Slides/saleoff.png"/>
+                                                                    <!--<img src="<?php echo base_url('upload'); ?>/Slides/saleoff.png"-->
+                                         <!--alt="<?php echo base_url('upload'); ?>/Slides/saleoff.png"/>-->
                                 
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
@@ -50,7 +50,7 @@
                                  data-speed="300"
                                  data-start="1528"
                                  data-easing="easeOutExpo"  >
-                                                                    Combo1                                
+                                                                    <!--Combo1-->                                
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
                                                         <div class="caption large_text lfr											easeOutExpo   easeOutExpo											"
@@ -59,7 +59,7 @@
                                  data-speed="300"
                                  data-start="2174"
                                  data-easing="easeOutExpo"  >
-                                                                    Giảm giá 20% nay chỉ còn                                
+                                                                    <!--Giảm giá 20% nay chỉ còn-->                                
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
                                                         <div class="caption bold_red_text lfb											easeOutExpo   easeOutExpo											"
@@ -68,17 +68,17 @@
                                  data-speed="300"
                                  data-start="2400"
                                  data-easing="easeOutExpo"  >
-                                                                    40.000đ                                
+                                                                    <!--40.000đ-->                                
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
-                                                        <div class="caption tp-button btn-theme-primary lfb											easeInOutExpo   easeInOutExpo											"
+<!--                                                        <div class="caption tp-button btn-theme-primary lfb											easeInOutExpo   easeInOutExpo											"
                                  data-x="70"
                                  data-y="278"
                                  data-speed="300"
                                  data-start="2887"
                                  data-easing="easeOutExpo"  >
                                                                     MUA NGAY                                
-                            </div>
+                            </div>-->
                                             </li>
                 
                     <li                              data-masterspeed="300"
@@ -87,7 +87,7 @@
                             data-thumb="<?php echo base_url('upload'); ?>/Slides/img-slider2.jpg">
 
                         
-                            <img src="<?php echo base_url('upload'); ?>/Slides/img-slider2.jpg" alt="Image 1"/>
+                            <img src="<?php echo base_url('upload'); ?>/Slides/poster-phu1.png" alt="Image 1"/>
                         
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
                                                         <div class="caption  randomrotate											easeInOutQuad   easeInOutQuad											"
@@ -96,8 +96,8 @@
                                  data-speed="300"
                                  data-start="365"
                                  data-easing="easeOutExpo"  >
-                                                                    <img src="<?php echo base_url('upload'); ?>/Slides/image3.png"
-                                         alt="<?php echo base_url('upload'); ?>/Slides/image3.png"/>
+                                                                    <!--<img src="<?php echo base_url('upload'); ?>/Slides/image3.png"-->
+                                         <!--alt="<?php echo base_url('upload'); ?>/Slides/image3.png"/>-->
                                 
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
@@ -107,8 +107,8 @@
                                  data-speed="300"
                                  data-start="819"
                                  data-easing="easeOutExpo"  >
-                                                                    <img src="<?php echo base_url('upload'); ?>/Slides/saleoff.png"
-                                         alt="<?php echo base_url('upload'); ?>/Slides/saleoff.png"/>
+                                                                    <!--<img src="<?php echo base_url('upload'); ?>/Slides/saleoff.png"-->
+                                         <!--alt="<?php echo base_url('upload'); ?>/Slides/saleoff.png"/>-->
                                 
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
@@ -118,7 +118,7 @@
                                  data-speed="300"
                                  data-start="1528"
                                  data-easing="easeOutExpo"  >
-                                                                    Combo2                                
+                                                                    <!--Combo2-->                                
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
                                                         <div class="caption large_text lfr											easeOutExpo   easeOutExpo											"
@@ -127,7 +127,7 @@
                                  data-speed="300"
                                  data-start="2174"
                                  data-easing="easeOutExpo"  >
-                                                                    Nay chỉ còn                                
+                                                                    <!--Nay chỉ còn-->                                
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
                                                         <div class="caption bold_red_text lfb											easeOutExpo   easeOutExpo											"
@@ -136,17 +136,17 @@
                                  data-speed="300"
                                  data-start="2400"
                                  data-easing="easeOutExpo"  >
-                                                                    50.000đ                                
+                                                                    <!--50.000đ-->                                
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
-                                                        <div class="caption tp-button btn-theme-primary lfb											easeOutExpo   easeOutExpo											"
+<!--                                                        <div class="caption tp-button btn-theme-primary lfb											easeOutExpo   easeOutExpo											"
                                  data-x="550"
                                  data-y="262"
                                  data-speed="300"
                                  data-start="2887"
                                  data-easing="easeOutExpo"  >
                                                                     MUA NGAY                                
-                            </div>
+                            </div>-->
                                             </li>
                 
                     <li                              data-masterspeed="300"
@@ -155,7 +155,7 @@
                             data-thumb="<?php echo base_url('upload'); ?>/Slides/img-slider1.jpg">
 
                         
-                            <img src="<?php echo base_url('upload'); ?>/Slides/img-slider1.jpg" alt="Image 2"/>
+                            <img src="<?php echo base_url('upload'); ?>/Slides/tem11.png" alt="Image 2"/>
                         
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
                                                         <div class="caption  randomrotate											easeInOutQuad   easeInOutQuad											"
@@ -164,8 +164,8 @@
                                  data-speed="300"
                                  data-start="365"
                                  data-easing="easeOutExpo"  >
-                                                                    <img src="<?php echo base_url('upload'); ?>/Slides/image4.png"
-                                         alt="<?php echo base_url('upload'); ?>/Slides/image4.png"/>
+                                                                    <!--<img src="<?php echo base_url('upload'); ?>/Slides/image4.png"-->
+                                         <!--alt="<?php echo base_url('upload'); ?>/Slides/image4.png"/>-->
                                 
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
@@ -175,8 +175,8 @@
                                  data-speed="300"
                                  data-start="819"
                                  data-easing="easeOutExpo"  >
-                                                                    <img src="<?php echo base_url('upload'); ?>/Slides/saleoff.png"
-                                         alt="<?php echo base_url('upload'); ?>/Slides/saleoff.png"/>
+                                                                    <!--<img src="<?php echo base_url('upload'); ?>/Slides/saleoff.png"-->
+                                         <!--alt="<?php echo base_url('upload'); ?>/Slides/saleoff.png"/>-->
                                 
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
@@ -186,7 +186,7 @@
                                  data-speed="300"
                                  data-start="1528"
                                  data-easing="easeOutExpo"  >
-                                                                    Combo3                                
+                                                                    <!--Combo3-->                                
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
                                                         <div class="caption medium_text lfr											easeOutExpo   easeOutExpo											"
@@ -195,7 +195,7 @@
                                  data-speed="300"
                                  data-start="2174"
                                  data-easing="easeOutExpo"  >
-                                                                    giảm giá 10% trong khung giờ <br> 10-12h chỉ còn                                
+                                                                    <!--giảm giá 10% trong khung giờ <br> 10-12h chỉ còn-->                                
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
                                                         <div class="caption bold_red_text lfb											easeOutExpo   easeOutExpo											"
@@ -204,19 +204,19 @@
                                  data-speed="300"
                                  data-start="2400"
                                  data-easing="easeOutExpo"  >
-                                                                    55.000đ                                
+                                                                    <!--55.000đ-->                                
                             </div>
                                                     <!-- THE MAIN IMAGE IN THE SLIDE -->
-                                                        <div class="caption tp-button btn-theme-primary lfb											easeInOutExpo   easeInOutExpo											"
+<!--                                                        <div class="caption tp-button btn-theme-primary lfb											easeInOutExpo   easeInOutExpo											"
                                  data-x="70"
                                  data-y="278"
                                  data-speed="300"
                                  data-start="2887"
                                  data-easing="easeOutExpo"  >
                                                                     MUA NGAY                                
-                            </div>
+                            </div>-->
                                             </li>
-                
+<!--                
                     <li                              data-masterspeed="300"
                             data-transition="random"
                             data-slotamount="7"
@@ -225,7 +225,7 @@
                         
                             <img src="<?php echo base_url('upload'); ?>/Slides/img-slider2.jpg" alt="Image 3"/>
                         
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption  randomrotate											easeInOutQuad   easeInOutQuad											"
                                  data-x="57"
                                  data-y="97"
@@ -236,7 +236,7 @@
                                          alt="<?php echo base_url('upload'); ?>/Slides/image2.png"/>
                                 
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption  randomrotate											easeInOutQuad   easeInOutQuad											"
                                  data-x="102"
                                  data-y="56"
@@ -247,7 +247,7 @@
                                          alt="<?php echo base_url('upload'); ?>/Slides/saleoff.png"/>
                                 
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption large_black_text lft											easeOutExpo   easeOutExpo											"
                                  data-x="550"
                                  data-y="80"
@@ -256,7 +256,7 @@
                                  data-easing="easeOutExpo"  >
                                                                     Đặc Biệt                                
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption large_text lfr											easeOutExpo   easeOutExpo											"
                                  data-x="550"
                                  data-y="150"
@@ -265,7 +265,7 @@
                                  data-easing="easeOutExpo"  >
                                                                     Mua 2 tặng 1                                
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption bold_red_text lfb											easeOutExpo   easeOutExpo											"
                                  data-x="550"
                                  data-y="216"
@@ -274,7 +274,7 @@
                                  data-easing="easeOutExpo"  >
                                                                     30.000đ                                
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption tp-button btn-theme-primary lfb											easeOutExpo   easeOutExpo											"
                                  data-x="550"
                                  data-y="262"
@@ -293,7 +293,7 @@
                         
                             <img src="<?php echo base_url('upload'); ?>/Slides/img-slider1.jpg" alt="Image 4"/>
                         
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption  randomrotate											easeInOutQuad   easeInOutQuad											"
                                  data-x="42"
                                  data-y="164"
@@ -304,7 +304,7 @@
                                          alt="<?php echo base_url('upload'); ?>/Slides/image1.png"/>
                                 
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption  randomrotate											easeInOutQuad   easeInOutQuad											"
                                  data-x="102"
                                  data-y="56"
@@ -315,7 +315,7 @@
                                          alt="<?php echo base_url('upload'); ?>/Slides/saleoff.png"/>
                                 
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption large_black_text lft											easeOutExpo   easeOutExpo											"
                                  data-x="550"
                                  data-y="80"
@@ -324,7 +324,7 @@
                                  data-easing="easeOutExpo"  >
                                                                     Sản phẩm mới                                
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption medium_text lfr											easeOutExpo   easeOutExpo											"
                                  data-x="469"
                                  data-y="138"
@@ -333,16 +333,16 @@
                                  data-easing="easeOutExpo"  >
                                                                     Giảm ngay 10% trong tuần đầu tiên ra mắt <br /> chỉ còn                                 
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption bold_red_text lfb											easeOutExpo   easeOutExpo											"
                                  data-x="550"
                                  data-y="216"
                                  data-speed="300"
                                  data-start="2400"
                                  data-easing="easeOutExpo"  >
-                                                                    35.000đ                                
+                                                                   35.000đ                                
                             </div>
-                                                    <!-- THE MAIN IMAGE IN THE SLIDE -->
+                                                     THE MAIN IMAGE IN THE SLIDE 
                                                         <div class="caption tp-button btn-theme-primary lfb											easeOutExpo   easeOutExpo											"
                                  data-x="550"
                                  data-y="262"
@@ -353,7 +353,7 @@
                             </div>
                                             </li>
                             </ul>
-                    </div>
+-->                    </div>
     </div>
     </div>
 <script type="text/javascript">
@@ -398,7 +398,7 @@
         <div class="col-inner">
             <div class="banner-wrapper clearfix">
             <a href="#" target="_self">
-            <img src="http://foodstore.myzozo.net/image/cache/catalog/foodstore%20banner%201-427x146.jpg" class="img-responsive" alt="">
+            <img   src="<?php echo base_url('upload'); ?>/Slides/toi.png" class="img-responsive" alt="">
         </a>
     </div>        </div>
     </div>
@@ -406,7 +406,7 @@
         <div class="col-inner">
             <div class="banner-wrapper clearfix">
             <a href="#" target="_self">
-            <img src="http://foodstore.myzozo.net/image/cache/catalog/foodstore%20banner%202-427x146.jpg" class="img-responsive" alt="">
+            <img src="<?php echo base_url('upload'); ?>/Slides/hanh.png" class="img-responsive" alt="">
         </a>
     </div>        </div>
     </div>

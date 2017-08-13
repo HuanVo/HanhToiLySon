@@ -93,7 +93,7 @@
                                         <div class="image">
                                             <!-- text sale-->
                                             <a class="img" href="<?php echo base_url('chi-tiet-san-pham/'.seoname($prod->name_catalog).'/'.seoname($prod->name).'/'.$prod->id_product) ?>" >
-                                                <img src="<?php echo base_url('upload'); ?>/products/<?php echo $prod->image_link; ?>" alt="<?php echo $prod->name;?>" class="img-responsive">
+                                                <img style="height: 216.56px;"src="<?php echo base_url('upload'); ?>/products/<?php echo $prod->image_link; ?>" alt="<?php echo $prod->name;?>" class="img-responsive">
                                             </a>
                                             <!-- zoom image-->
                                             <a href="<?php echo base_url('upload'); ?>/products/<?php echo $prod->image_link; ?>" class="info-view product-zoom" >

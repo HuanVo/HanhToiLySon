@@ -85,7 +85,7 @@
                                                        <div class="blog-item">
                                                            <div class="blog-body clearfix">
                                                             <div class="image clearfix">
-                                                                <img src="<?php echo base_url('upload'); ?>/tin-tuc/<?php echo $r->image; ?>" title="<?php echo $r->name ;?>" alt="<?php echo $r->name ;?>" class="img-responsive">
+                                                                <img class ="img-thumbnail imgfooter" src="<?php echo base_url('upload'); ?>/tin-tuc/<?php echo $r->image; ?>" title="<?php echo $r->name ;?>" alt="<?php echo $r->name ;?>" class="img-responsive">
                                                             </div>
                                                             <div class="group-blog">
                                                                    <div class="blog-title">
