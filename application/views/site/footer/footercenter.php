@@ -6,15 +6,15 @@
                                        <ul>
                                            <li>
                                                <span class="iconbox button"><i class="fa fa-map-marker">&nbsp;</i></span>
-                                               <span>Địa chỉ: Cầu Giấy, P Dịch Vọng, Q Cầu Giấy.  </span>
+                                               <span> <?php echo $supports->address; ?> </span>
                                            </li>
                                            <li>
                                                <span class="iconbox button"><i class="fa fa-mobile-phone">&nbsp;</i></span>
-                                               <span>Điện thoại: 0909 999 999</span>
+                                               <span>Điện thoại: <?php echo $supports->phone; ?></span>
                                            </li>
                                            <li>
                                                <span class="iconbox button"><i class="fa fa-envelope-o">&nbsp;</i></span>
-                                               <span>Email: contact@zozo.vn</span>
+                                               <span>Email: <?php echo $supports->gmail; ?></span>
                                            </li>
                                        </ul>
                                    </div>
@@ -22,7 +22,7 @@
                                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-12 box column">
                                    <div class="box-heading"><span>Thông tin</span></div>
                                    <ul class="list-unstyled">
-                                                                   <li><a href="#">Về Chúng Tôi</a></li>
+                                       <li><a href="<?php echo base_url(); ?>Store/adress">Về Chúng Tôi</a></li>
                                                                    <li><a href="#">Thông Tin Giao Hàng</a></li>
                                                                    <li><a href="#">Chính sách bảo mật</a></li>
                                                                    <li><a href="#">Điều khoản dịch vụ</a></li>

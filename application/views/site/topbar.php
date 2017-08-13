@@ -35,7 +35,7 @@
                         </div>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                             <div class="currency pull-right">
-                                <a href="">Hotline: 0914785821</a>
+                                <a >Hotline: <?php echo $supports->phone; ?></a>
                                 <a href="<?php echo base_url().'admin';?>">Mục quản trị viên</a>
                             </div>
                         </div>
@@ -91,29 +91,5 @@
                             </div>
                         </div>
 
-<!--                        <div id="search_mobile" class="search pull-left">
-
-                        </div>
-
-                        <div class="currency-mobile pull-left">
-                            <div class="quickaccess-toggle">
-                                <i class="fa fa-money"></i>
-                            </div>
-                            <div class="inner-toggle">
-                                <div class="currency pull-left">
-                                       
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="language-mobile pull-left">
-                            <div class="quickaccess-toggle">
-                                <i class="fa fa-cog"></i>
-                            </div>
-                            <div class="inner-toggle">
-                                <div class="language pull-left">
-                               </div>
-                            </div>
-                        </div>-->
                     </div>
                 </div>

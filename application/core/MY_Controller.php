@@ -24,7 +24,10 @@ class MY_Controller extends CI_Controller{
             }
             default:
             {
+                $this->load->model('support_model');
+                $support = $this->support_model->get_info('1');
                 
+                $this->data['supports'] = $support;
                 // kiem tra user da dang nhap hay chua
                 $user_id_login = $this->session->userdata('id_user_login');
                 if($user_id_login){
@@ -67,6 +70,7 @@ class MY_Controller extends CI_Controller{
                         $sub_product->sub_pr_xn = $product;
                     }
                 }
+                
 
                 $this->data['catalog_list'] = $catalog_list;
                 $catalog = $this->uri->rsegment('3');
@@ -101,6 +105,8 @@ class MY_Controller extends CI_Controller{
                 $this->data['carts'] = $carts;
                 //pre($this->data['carts']);
                 
+                
+               
             }
 
         }

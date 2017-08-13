@@ -13,30 +13,7 @@
                 $input['order'] = array('creates','DESC');//DESC asc
                 $news = $this->news_model->get_list($input);
                 $this->data['news_pp'] = $news;
-                
-                
-                
-//            $total_rows =  $this->news_model->get_total();
-//            $this->data['total_rows'] = $total_rows;
-//            // load ra thu vien phan trang
-//            $this->load->library('pagination');
-//            $config = array();
-//            $config['total_rows'] = $total_rows;// tong so dong
-//            $config['base_url'] = base_url(); // link hien thi du lieu
-//            $config['per_page'] = 6; // so luong san pham hien thi tren 1 trang
-//            $config['uri__segment'] = 4; // phan doan hien thi ra so trang tren url. !
-//            $config['next_link'] = 'Trang kế tiếp';
-//            $config['prev_link'] = 'Trang trước';
-//
-//            // khoi tao cac cau hinh cua phan trang
-//            $this->pagination->initialize($config);
-//            $segment = $this->uri->segment(4);
-//            $segment = intval($segment);
-//            $input = array();
-//            $input['limit'] = array($config['per_page'], $segment);
 
-            // end phan trang
-                
                 
             $this->data['temp'] = 'site/news/index';
             $this->load->view('site/layout',$this->data);
