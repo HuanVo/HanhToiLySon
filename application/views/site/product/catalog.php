@@ -19,32 +19,29 @@
                             </div>
                             <div class="filter-right">
                                 <div class="product-compare">
-                                    <a href="" class="btn btn-theme-primary" id="compare-total">So sánh sản phẩm (0)</a>
+                                    <a class="btn btn-theme-primary" id="compare-total">So sánh sản phẩm (0)</a>
                                 </div>
-
-                                <div class="sort">
+<!--                                <div class="sort">
                                     <span>Sắp xếp theo:</span>
-                                    <select class="form-control" onchange="location = this.value;">
-                                                                      <option value="http://foodstore.myzozo.net/mon-chinh?sort=p.sort_order&amp;order=ASC" selected="selected">Mặc định</option>
-                                                                    <option value="#">Tên (A - Z)</option>
-                                                                   <option value="#">Tên (Z - A)</option>
+                                   <select class="form-control" onchange="location = this.value;">  onchange="location = this.value;"
+                                                                      <option value="" selected="selected">Mặc định</option>
+                                                                      <option value="<?php echo base_url();?>san-pham/danh-muc/<?php echo seoname($name_catalog); ?>/<?php echo $id_catalo; ?>/<?php if(isset($limit)){echo $limit;} else echo '10'; ?>/ASC">Tên (A - Z)</option>
+                                                                   <option value="<?php echo base_url();?>san-pham/danh-muc/<?php echo seoname($name_catalog); ?>/<?php echo $id_catalo; ?>/<?php if(isset($limit)){echo $limit;} else echo '10'; ?>/DESC">Tên (Z - A)</option>
                                                                     <option value="#">Giá (Thấp &gt; Cao)</option>
                                                                    <option value="#">Giá (Cao &gt; Thấp)</option>
-                                                                    <option value="#">Đánh giá (Cao nhất)</option>
-                                                                     <option value="#">Đánh giá (Thấp nhất)</option>
-                                                                    <option value="#">Dòng sản phẩm (A - Z)</option>
-                                                                    <option value="#">Dòng sản phẩm (Z - A)</option>
+                                                                    <option value="#">Lượt xem (Cao nhất)</option>
+                                                                     <option value="#">Lượt xem (Thấp nhất)</option>
                                     </select>
-                                </div>
-
+                                </div>-->
                                 <div class="limit">
                                     <span>Giới hạn:</span>
                                     <select class="form-control" onchange="location = this.value;">
-                                                                                                                                    <option value="http://foodstore.myzozo.net/mon-chinh?limit=15" selected="selected">15</option>
-                                        <option value="http://foodstore.myzozo.net/mon-chinh?limit=25">25</option>
-                                        <option value="">50</option>
-                                        <option value="#">75</option>
-                                        <option value="#">100</option>
+                                        <option value="<?php echo base_url();?>san-pham/danh-muc/<?php echo seoname($name_catalog); ?>/<?php echo $id_catalo; ?>/10" <?php if(isset($limit))if($limit ==10) echo 'selected'; ?>>10</option>
+                                        <option value="<?php echo base_url();?>san-pham/danh-muc/<?php echo seoname($name_catalog); ?>/<?php echo $id_catalo; ?>/15" <?php if(isset($limit)) if($limit ==15) echo 'selected'; ?>>15</option>
+                                        <option value="<?php echo base_url();?>san-pham/danh-muc/<?php echo seoname($name_catalog); ?>/<?php echo $id_catalo; ?>/25" <?php if(isset($limit)) if($limit ==25) echo 'selected'; ?>>25</option>
+                                        <option value="<?php echo base_url();?>san-pham/danh-muc/<?php echo seoname($name_catalog); ?>/<?php echo $id_catalo; ?>/50" <?php if(isset($limit)) if($limit ==50) echo 'selected'; ?>>50</option>
+                                        <option value="<?php echo base_url();?>san-pham/danh-muc/<?php echo seoname($name_catalog); ?>/<?php echo $id_catalo; ?>/75" <?php if(isset($limit)) if($limit ==75) echo 'selected'; ?>>75</option>
+                                        <option value="<?php echo base_url();?>san-pham/danh-muc/<?php echo seoname($name_catalog); ?>/<?php echo $id_catalo; ?>/100" <?php if(isset($limit)) if($limit ==100) echo 'selected'; ?>>100</option>
                                     </select>
                                 </div>
 

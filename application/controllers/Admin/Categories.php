@@ -76,6 +76,7 @@
             if($this->input->post()){
                 $this->form_validation->set_rules('name','Tên sản phẩm bắt buộc nhập','required');
                 $this->form_validation->set_rules('decrip','Mô tả bắt buộc nhập','required|min_length[4]');
+                
                 if($this->form_validation->run()){
                     $name = $this->input->post('name');
                     $decrip = $this->input->post('decrip');

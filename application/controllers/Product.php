@@ -20,6 +20,8 @@
             //pre($catalog_info);
             // kiem tra co phai la danh muc cha hay ko
             $input = array();
+            
+              
             if(intval($catalog_info->parent_id) == 0){
                 $input_catalog['where'] = array('parent_id' => $id_catalog);
                 $catalog_sub = $this->catalog_model->get_list($input_catalog);
@@ -34,32 +36,18 @@
             {
                 $input['where'] = array('id_catalog' => $id_catalog);
             }
-            
             // lay danh sach san pham
             $this->load->model('product_model');
             $total_rows = $this->product_model->get_total($input);
-          
             $this->data['total_rows'] = $total_rows;
-            // load ra thu vien phan trang
-//            $this->load->library('pagination');
-//            $config = array();
-//            $config['total_rows'] = $total_rows;// tong so dong
-//            $config['base_url'] = base_url('san-pham/danh-muc/'.seoname($catalog_info->name).'/'.$id_catalog); // link hien thi du lieu
-//            $config['per_page'] = 12; // so luong san pham hien thi tren 1 trang
-//            $config['uri__segment'] = 5; // phan doan hien thi ra so trang tren url. !
-//            $config['next_link'] = 'Trang kế tiếp';
-//            $config['prev_link'] = 'Trang trước';
-//            // khoi tao cac cau hinh cua phan trang
-//            $this->pagination->initialize($config);
-//            $segment = $this->uri->segment(5);
-//            $segment = intval($segment);
-//            //pre($catalog_subs_id);
-//            $input = array();
-//            $input['limit'] = array($config['per_page'], $segment);
-            // end phan trang
-            
+            if($this->uri->rsegment('4')){
+                $lm = intval($this->uri->rsegment('4'));
+                $input['limit'] = array($lm, 0);
+                $this->data['limit'] = $lm;
+            }
             
             $this->data['name_catalog'] =$catalog_info->name;
+            $this->data['id_catalo']= $catalog_info->id_catalog;
             if(isset($catalog_subs_id)){
                 $this->db->where_in('id_catalog', $catalog_subs_id);
             }
@@ -104,6 +92,7 @@
             $input = array();
             if($this->input->get('category_id') > 0){
                 $id_catalog = $this->input->get('category_id');
+                $this->data['id_catal'] = $id_catalog;
                 $this->load->model('catalog_model');
                 $input1['where'] = array('parent_id' => $id_catalog);
                 $catalog_list = $this->catalog_model->get_list($input1);
@@ -113,27 +102,34 @@
                 }
                 $this->db->where_in('id_catalog', $id_catalog_subs);
             }
+            $row_finded = $this->product_model->get_total($input);
+            $this->data['rowfinded'] = $row_finded;
+            if($this->input->get('limit')){
+                $input['limit'] = array(intval($this->input->get('limit')), 0);
+                $this->data['limit'] = intval($this->input->get('limit'));
+            }
             $input['like'] = array('name', $key);
+            
             $list = $this->product_model->get_list($input);
 
             $this->data['list'] = $list;
-            if($this->uri->rsegment('3') == 1){
-                // auto tim kiem
-                $result = array();
-                foreach ($list as $row){
-                    $item = array();
-                    $item['id'] = $row->id_product;
-                    $item['label'] = $row->name;
-                    $item['value'] = $row->name;
-                    $result[] = $item;
-                }
-                // du lieu tra ve duoi dang json
-                die(json_encode($result));
-            }else{
+ //           if($this->uri->rsegment('3') == 1){
+//                // auto tim kiem
+//                $result = array();
+//                foreach ($list as $row){
+//                    $item = array();
+//                    $item['id'] = $row->id_product;
+//                    $item['label'] = $row->name;
+//                    $item['value'] = $row->name;
+//                    $result[] = $item;
+//                }
+//                // du lieu tra ve duoi dang json
+//                die(json_encode($result));
+//            }else{
                 // load view
                 $this->data['temp'] = 'site/product/search';
                 $this->load->view('site/layout', $this->data);
-            }
+            //}
         }
         function search_price(){
             $price_from = $this->input->get('price_from');

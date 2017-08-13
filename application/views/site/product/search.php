@@ -35,7 +35,7 @@
         </form>
         <!-- End form search-->
         <!--Show product finded-->
-        <h2>Các sản phẩm thỏa mãn tiêu chí tìm kiếm</h2>
+        <h5>Các sản phẩm thỏa mãn tiêu chí tìm kiếm <span style="color: red;"><?php if(isset($rowfinded))echo $rowfinded;else echo '0'; ?></span> kết quả trả về</h5>
         <!--==========products filter=========-->
          <div class="product-filter ">
             <div class="inner clearfix">
@@ -51,12 +51,12 @@
                 </div>
                  <div class="filter-right">
                     <div class="product-compare">
-                         <a href="" class="btn btn-theme-primary" id="compare-total">Thêm vào so sánh (0)</a>
+                         <a  class="btn btn-theme-primary" id="compare-total">Thêm vào so sánh (0)</a>
                     </div>
-                    <div class="sort">
+<!--                    <div class="sort">
                         <span>Sắp xếp theo:</span>
                             <select class="form-control" onchange="location = this.value;">
-                                <option value="" selected="selected">Mặc định</option>  <!-- http://foodstore.myzozo.net/search?sort=p.sort_order&amp;order=ASC&amp;search=combo-->
+                                <option value="" selected="selected">Mặc định</option>   http://foodstore.myzozo.net/search?sort=p.sort_order&amp;order=ASC&amp;search=combo
                                 <option value="#">Tên (A - Z)</option>
                                 <option value="#">Tên (Z - A)</option>
                                 <option value="#">Giá (Thấp &gt; Cao)</option>
@@ -66,15 +66,16 @@
                                 <option value="#">Dòng sản phẩm (A - Z)</option>
                                 <option value="#">Dòng sản phẩm (Z - A)</option>
                             </select>
-                    </div>
+                    </div>-->
                     <div class="limit">
                         <span>Giới hạn:</span>
-                        <select class="form-control" onchange="">
-                            <option value="http://foodstore.myzozo.net/search?search=combo&amp;limit=15" selected="selected">15</option>
-                            <option value="#">25</option>
-                            <option value="#">50</option>
-                            <option value="#">75</option>
-                            <option value="#">100</option>
+                        <select class="form-control" onchange="location = this.value;">
+                            <option value="<?php echo base_url(); ?>product/search?search=<?php echo isset($key) ? $key : '' ?><?php if(isset($id_catal))echo '&category_id='.$id_catal; ?>&limit=10" <?php if(isset($limit)) if($limit ==10) echo 'selected';?> >10</option>
+                            <option value="<?php echo base_url(); ?>product/search?search=<?php echo isset($key) ? $key : '' ?><?php if(isset($id_catal))echo '&category_id='.$id_catal; ?>&limit=15" <?php if(isset($limit)) if($limit ==15) echo 'selected';?>>15</option>
+                            <option value="<?php echo base_url(); ?>product/search?search=<?php echo isset($key) ? $key : '' ?><?php if(isset($id_catal))echo '&category_id='.$id_catal; ?>&limit=25" <?php if(isset($limit)) if($limit ==25) echo 'selected';?>>25</option>
+                            <option value="<?php echo base_url(); ?>product/search?search=<?php echo isset($key) ? $key : '' ?><?php if(isset($id_catal))echo '&category_id='.$id_catal; ?>&limit=50" <?php if(isset($limit)) if($limit ==50) echo 'selected';?>>50</option>
+                            <option value="<?php echo base_url(); ?>product/search?search=<?php echo isset($key) ? $key : '' ?><?php if(isset($id_catal))echo '&category_id='.$id_catal; ?>&limit=75"<?php if(isset($limit)) if($limit ==75) echo 'selected';?>>75</option>
+                            <option value="<?php echo base_url(); ?>product/search?search=<?php echo isset($key) ? $key : '' ?><?php if(isset($id_catal))echo '&category_id='.$id_catal; ?>&limit=100" <?php if(isset($limit)) if($limit ==100) echo 'selected';?>>100</option>
                          </select>
                     </div>
 

@@ -123,8 +123,6 @@
                 $data['status'] = 2;
                 $this->transaction_model->update($transactrion_id ,$data);
             }
-
-
         }
     }
 ?>
