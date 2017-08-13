@@ -2,6 +2,7 @@
         <div id="column-left" class="hidden-xs sidebar">
                                           
     <div class="box carousel slide pavtestimonial hidden-sm hidden-xs nopadding">
+        <div class="box-heading" style="font-size: 10px;"><span>Hỗ trợ trực tuyến</span></div>
         <div class="box-content">
             <ul class="media-list">
             <li class="media">
