@@ -1,16 +1,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Foodstore</title>
+    <title>Hành tỏi Lý Sơn</title>
     <base href="<?php echo base_url(); ?>">
                             <meta property="og:url" content="index.html" />
                                 <meta property="og:type" content="website" />
-                                <meta property="og:title" content="Foodstore" />
+                                <meta property="og:title" content="Hành tỏi Lý Sơn" />
                                 <meta property="og:description" />
                                 <meta property="og:image" content="image/catalog/logo/logo.png" />
                                 <meta name="twitter:card" content="summary" />
                                 <meta name="twitter:description" />
-                                <meta name="twitter:title" content="Foodstore" />
+                                <meta name="twitter:title" content="Hành tỏi Lý Sơn" />
                                 <meta name="twitter:image" content="image/catalog/logo/logo.png" />
             
     <link href="<?php echo public_url('site') ?>/css/bootstrap.css" rel="stylesheet" />

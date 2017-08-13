@@ -10,12 +10,10 @@ $this->load->view('admin/product/head', $this->data);
             <h6>Danh sách danh mục sản phẩm</h6>
             <div class="num f12">Tổng số: <b><?php echo $total_rows; ?></b></div>
         </div>
-
         <table cellpadding="0" cellspacing="0" width="100%" class="sTable mTable myTable withCheck" id="checkAll">
             <thead class="filter"><tr><td colspan="8">
                     <form method="get" action="" class="list_filter form">
                         <table width="80%" cellspacing="0" cellpadding="0"><tbody>
-
                             <tr>
                                 <td style="width:40px;" class="label"><label for="filter_id">Mã số</label></td>
                                 <td class="item"><input type="text" style="width:55px;" id="filter_id" value="<?php echo $this->input->get('id'); ?>" name="id"></td>

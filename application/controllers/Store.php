@@ -11,8 +11,8 @@
             // kiem tra xem du lieu post len
             if($this->input->post()){
                 $this->form_validation->set_rules('name','Tên của bạn bắt buộc nhập','required');
-                $this->form_validation->set_rules('email','địa chỉ email bắt buộc nhập','valid_email');
-                $this->form_validation->set_rules('content','nội dung bắt buộc nhập','required');
+                $this->form_validation->set_rules('email','địa chỉ email bắt buộc nhập','required|valid_email');
+                $this->form_validation->set_rules('content','nội dung bắt buộc nhập','required|min_length[10]');
                 if($this->form_validation->run()){
                     $name = $this->input->post('name');
                     $email = $this->input->post('email');

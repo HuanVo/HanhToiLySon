@@ -6,7 +6,7 @@
                                        <div class="box-content">
                                            <div class="about-us">
                                                <p><img alt="logo" src="<?php echo base_url('upload');?>/logo/logo.png"></p>
-                                               <p>Nơi bạn được thưởng thức những món ăn ngon nhất.</p>
+                                               <p>Nơi bạn đặt slog.</p>
                                            </div>
                                            <div class="social">
                                                <ul>
@@ -55,9 +55,8 @@
                                                 </a>
                                                 
                                                 <?php endforeach; ?>
-                                                
                                             </div>
-                                           <div style=" text-align: right"> <a href="#">Xem thêm...</a></div>
+                                           <div style=" text-align: right"> <a href="<?php echo base_url();?>">Xem thêm...</a></div>
                                        </div>
                                        <script type="text/javascript">
                                            $(document).ready(function () {
@@ -111,7 +110,7 @@
                                        <div class="box-content">
                                            <div id="pav-twitter1341207061" class="pav-twitter">
                                                <!--facebook-->
-                                               <div class="fb-page" data-href="https://www.facebook.com/ShipCom/?fref=ts" data-tabs="timeline" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Soft.Skill.4U/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Soft.Skill.4U/">Soft Skills 4U</a></blockquote></div>
+                                               <div class="fb-page" data-href="<?php echo $supports->fanpage; ?>" data-tabs="timeline" data-height="300" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Soft.Skill.4U/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Soft.Skill.4U/">Soft Skills 4U</a></blockquote></div>
                                                  </div>
                                        </div>
                                    </div>

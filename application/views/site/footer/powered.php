@@ -119,7 +119,7 @@
               </style>
               <div data-toggle="0" class="wrap" style="position:fixed; width:220px; height: 320px; ">
                   <span class="x" style="">X</span>
-                  <div class="fb-page" data-adapt-container-width="true" data-height="320" data-hide-cover="false" data-href="https://www.facebook.com/ShipCom/?fref=ts" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="280" style="position:relative; z-index:9999999; right:50px; bottom:21px;border-left: 1px solid #fff;border-top: 1px solid #fff;">
+                  <div class="fb-page" data-adapt-container-width="true" data-height="320" data-hide-cover="false" data-href="<?php echo $supports->onlinechat; ?>" data-show-facepile="true" data-show-posts="false" data-small-header="false" data-tabs="messages" data-width="280" style="position:relative; z-index:9999999; right:50px; bottom:21px;border-left: 1px solid #fff;border-top: 1px solid #fff;">
                       
                   </div>
                   

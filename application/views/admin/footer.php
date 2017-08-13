@@ -1,3 +1,3 @@
 <div id="footer">
-    <div class="wrapper">Bản quyền © 2012-2016 hocphp.info</div>
+    <div class="wrapper">Bản quyền ©  <?php echo base_url(); ?></div>
 </div>

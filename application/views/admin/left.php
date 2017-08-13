@@ -28,7 +28,7 @@
         </li>
         <li class="tran">
 
-            <a href="#" class=" exp">
+            <a href="<?php echo admin_url(); ?>" class=" exp">
                 <span>Quản lý bán hàng</span>
                 <strong>2</strong>
             </a>
@@ -39,7 +39,7 @@
                         Giao dịch							</a>
                 </li>
                 <li>
-                    <a href="<?php echo admin_url('order'); ?>">
+                    <a href="<?php echo admin_url(); ?>">
                         Đơn hàng sản phẩm							</a>
                 </li>
             </ul>
@@ -47,7 +47,7 @@
         </li>
         <li class="product">
 
-            <a href="" class=" exp">
+            <a href="<?php echo admin_url(); ?>" class=" exp">
                 <span>Sản phẩm</span>
                 <strong>3</strong>
             </a>
@@ -62,7 +62,7 @@
                         Danh mục							</a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php echo admin_url(); ?>">
                         Phản hồi							</a>
                 </li>
             </ul>
@@ -70,7 +70,7 @@
         </li>
         <li class="account">
 
-            <a href="" class=" exp">
+            <a href="<?php echo admin_url(); ?>" class=" exp">
                 <span>Tài khoản</span>
                 <strong>3</strong>
             </a>
@@ -81,11 +81,11 @@
                         Ban quản trị							</a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php echo admin_url(); ?>">
                         Nhóm quản trị							</a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php echo admin_url(); ?>">
                         Thành viên							</a>
                 </li>
             </ul>
@@ -93,18 +93,18 @@
         </li>
         <li class="support">
 
-            <a href="" class=" exp">
+            <a href="<?php echo admin_url(); ?>" class=" exp">
                 <span>Hỗ trợ và liên hệ</span>
                 <strong>2</strong>
             </a>
 
             <ul class="sub">
                 <li>
-                    <a href="">
+                    <a href="<?php echo admin_url(); ?>">
                         Hỗ trợ							</a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php echo admin_url(); ?>">
                         Liên hệ							</a>
                 </li>
             </ul>
@@ -112,7 +112,7 @@
         </li>
         <li class="content">
 
-            <a href="" class=" exp">
+            <a href="<?php echo admin_url(); ?>" class=" exp">
                 <span>Nội dung</span>
                 <strong>4</strong>
             </a>
@@ -128,11 +128,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="<?php echo admin_url(); ?>">
                         Trang thông tin							</a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="<?php echo admin_url(); ?>">
                         Video							</a>
                 </li>
             </ul>
