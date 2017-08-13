@@ -7,12 +7,17 @@
         <div class="horControlB menu_action">
             <ul>
                 <li>
+                    <a href="<?php echo admin_url('categories/index'); ?>">
+                    <img src="<?php echo public_url(); ?>/admin/images/icons/control/16/database.png">
+                    <span>Quản lí danh mục tin tức</span></a>
+                </li>
+                <li>
                     <a href="<?php echo admin_url('news/add'); ?>">
                     <img src="<?php echo public_url(); ?>/admin/images/icons/control/16/add.png">
                     <span>Thêm mới</span></a>
                 </li>
                 <li>
-                    <a href="<?php echo public_url('news/index'); ?>">
+                    <a href="<?php echo admin_url('news/index'); ?>">
                         <img src="<?php echo public_url(); ?>/admin/images/icons/control/16/feature.png">
                         <span>Tiêu biểu</span>
                     </a>
