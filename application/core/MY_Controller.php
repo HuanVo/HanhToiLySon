@@ -12,12 +12,18 @@ class MY_Controller extends CI_Controller{
             case 'admin':
             {
                 $this->load->helper('admin');
+                
+            $admin_id_login = $this->session->userdata('login');
+                if($admin_id_login){
+                    $this->load->model('admin_model');
+                    $user_info = $this->admin_model->get_info($admin_id_login);
+                    $this->data['admin_info'] = $user_info;
+                }
                 $this->check_login();
                 break;
             }
             default:
             {
-                
                 
                 // kiem tra user da dang nhap hay chua
                 $user_id_login = $this->session->userdata('id_user_login');
@@ -95,11 +101,6 @@ class MY_Controller extends CI_Controller{
                 $this->data['carts'] = $carts;
                 //pre($this->data['carts']);
                 
-                
-                
-               
-
-
             }
 
         }
@@ -113,9 +114,9 @@ class MY_Controller extends CI_Controller{
             redirect(admin_url('login'));
         }
         if($login && $controller == 'login'){
+            
             redirect(admin_url('home'));
         }
-
     }
 
 

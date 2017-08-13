@@ -4,6 +4,7 @@
         {
             parent::__construct();
             $this->load->model('news_model');
+            
     }
         function index(){
             $total_rows =  $this->news_model->get_total();
@@ -71,7 +72,7 @@
             $this->data['temp'] = 'admin/news/index';
             $this->load->view('admin/main', $this->data);
         }
-        // Them mot san pham moi
+        // Them moi tin tuc
         function add(){
      
             // load thu vien validation
@@ -103,7 +104,11 @@
                     $status = $this->input->post('status');
                     //  up anh minh hoa san pham
                     
-                    $this->load->library('upload_library');
+                    $config['max_size'] = '1000';
+                    $config['max_width']  = '1024';
+                    $config['max_height']  = '768';
+                    $config['allowed_types'] = 'gif|jpg|png';
+                    $this->load->library('upload_library', $config);
                     $upload_path = './upload/tin-tuc';
                     $upload_data = $this->upload_library->upload($upload_path, 'image');
                     $image_link = '';
@@ -137,160 +142,112 @@
             $this->data['temp'] = 'admin/news/add';
             $this->load->view('admin/main', $this->data);
         }
-        // chinh sua san pham
+        // chinh sua tin tuc
         function edit(){
-            // load ra id san pham
-            $id_product = $this->uri->rsegment('3');
-            $product_info = $this->product_model->get_info($id_product);
-            $image_link = $product_info->image_link;
-            $this->data['product_info'] = $product_info;
-            if(!$product_info){
-                // thong bao ko ton tai id nay
-                $this->session->set_flashdata('message', 'Không tồn tại sản phẩm này');
-                redirect(admin_url('product'));
-            }
-            $this->load->model('catalog_model');
-            $catalog_list = $this->catalog_model->get_list();
-            $this->data['catalog_list'] = $catalog_list;
             // load ra thu vien validation
             $this->load->library('form_validation');
             $this->load->helper('form');
+            // load ra id san pham
+            $id = $this->uri->rsegment('3');
+            $news_inf = $this->news_model->get_info($id);
+            $image_link = $news_inf->image;
+            $this->data['new_info'] = $news_inf;
+            if(!$news_inf){
+                // thong bao ko ton tai id nay
+                $this->session->set_flashdata('message', 'Không tồn tại tin tức này');
+                redirect(admin_url('news'));
+            }
+            $this->load->model('categories_model');
+            $categories_list = $this->categories_model->get_list();
+            $this->data['categories_list'] = $categories_list;
+            
             if($this->input->post()){
-                $this->form_validation->set_rules('name','Tên bắt buộc nhập','required');
-                $this->form_validation->set_rules('price','Giá bắt buộc nhập','required|max_length[10]');
+                $this->form_validation->set_rules('name','Tên bài viết bắt buộc nhập','required');
                 $this->form_validation->set_rules('catalog','Danh mục bắt buộc nhập','required');
                 $this->form_validation->set_rules('content','Nội dung bắt buộc nhập','required');
                 if($this->form_validation->run()){
                     // bat dau insert du lieu
                     $name = $this->input->post('name');
-                    $weigh = $this->input->post('weigh');
-                    $price = $this->input->post('price');
-                    $price = str_replace(',', '', $price);
+                    
                     $catalog = $this->input->post('catalog');
-                    $this->load->model('catalog_model');
-                    $catalog_info = $this->catalog_model->get_info($catalog);
+                    
+                    $this->load->model('categories_model');
+                    $catalog_info = $this->categories_model->get_info($catalog);
+                    
                     $content = $this->input->post('content');
-                    $discount = $this->input->post('discount');
-                    $discount = $discount = str_replace(',','',$discount);
-                    // lay ten file anh minh hoa dc upload
-                    $this->load->library('upload_library');
-                    $upload_path = './upload/products';
+                    $status = $this->input->post('status');
+                    //  up anh minh hoa san pham
+                    
+                    $config['max_size'] = '1000';
+                    $config['max_width']  = '1024';
+                    $config['max_height']  = '768';
+                    $config['allowed_types'] = 'gif|jpg|png';
+                    $this->load->library('upload_library', $config);
+                    $upload_path = './upload/tin-tuc';
                     $upload_data = $this->upload_library->upload($upload_path, 'image');
-
-                    // lay ten file anh minh hoa dc upload
-                    $this->load->library('upload_library');
-                    $upload_path = './upload/products';
-                    $upload_data = $this->upload_library->upload($upload_path, 'image');
-                    $image_link = '';
+                    
                     if(isset($upload_data['file_name'])){
                         $image_link = $upload_data['file_name'];
                     }
-                    // upload kem anh minh hoa
-                    $image_list = array();
-                    $image_list = $this->upload_library->upload_file($upload_path, 'image_list');
-                    $image_list_json = json_encode($image_list);
-                    // data du lieu insert
-
                     $data = array(
                         'name' => $name,
-                        'price' => $price,
-                        'discount' => $discount,
-                        'id_catalog' => $catalog,
-                        'weigh' => $weigh,
-                        'name_catalog' => $catalog_info->name,
-                        'warranty' => $this->input->post('warranty'),
-                        'gifts' => $this->input->post('gifts'),
-                        'site_title' => $this->input->post('site_title'),
-                        'meta_desc' => $this->input->post('meta_desc'),
-                        'meta_key' => $this->input->post('meta_key'),
+                        'image' => $image_link,
+                        'id_categories' => $catalog,
+                        'name_categories' => $catalog_info->name,
+                        'status' => $status,
                         'content' => $content,
-
+                        'view' => $news_inf->view,
                     );
-                    if($image_link != ''){
-                        $image_link_corner = $product_info->image_link;
-                        if(file_exists($image_link_corner)){
-                            unlink('./upload/products/'.$image_link_corner);
-                        }
-                        $data['image_link'] = $image_link;
-
-                    }
-                    if(!empty($image_list)){
-                        $image_list_corner = json_decode($product_info->image_list);
-                        if(is_array($image_list_corner)){
-                            foreach ($image_list_corner as $img){
-                                if(file_exists($img)){
-                                    unlink('./upload/products/'.$img);
-                                }
-                            }
-                        }
-                        $data['image_list'] = $image_list_json;
-
-                    }
                     // them moi vao co so du lieu
-                    if($this->product_model->update($product_info->id_product,$data)){
+                    if($this->news_model->update($news_inf->id, $data)){
                         // neu them thanh cong
-                        $message = $this->session->set_flashdata('message', 'Cập nhật mới thành công ');
-                        redirect(admin_url('product'));
+                        $this->session->set_flashdata('message', 'Sửa thành công tin tức');
+                        redirect(admin_url('news'));
                     }else{
                         // in ra thong bao loi
-                        $message = $this->session->set_flashdata('message', 'Có lỗi khi sửa sản phẩm');
-                        redirect(admin_url('product'));
+                        $this->session->set_flashdata('message', 'Có lỗi khi sửa tin tức');
+                        redirect(admin_url('news'));
                     }
                 }
             }
             // load view
-            $this->data['temp'] = 'admin/product/edit';
+            $this->data['temp'] = 'admin/news/edit';
             $this->load->view('admin/main', $this->data);
-
 
         }
         function delete(){
-            // lay ra id san pham
-            $id_product = $this->uri->rsegment('3');
-            $this->_del($id_product);
+            // lay ra id tin tuc
+            $id = $this->uri->rsegment('3');
+            $this->_del($id);
             // thong bao xoa thanh cong
-            $this->session->set_flashdata('message', 'Xóa thành công sản phẩm này');
-            redirect(admin_url('product'));
-
+            $this->session->set_flashdata('message', 'Xóa thành công tin tức này');
+            redirect(admin_url('news'));
         }
-        // xoa nhieu san pham
+        // xoa nhieu tin tuc
         function delete_all(){
             $ids = $this->input->post('ids');
-            foreach ($ids as $id_product){
-                $this->_del($id_product);
+            foreach ($ids as $id){
+                $this->_del($id);
             }
-
         }
-        private function _del($id_product, $redirect = true){
-            // lay ra thong tin san pham
-            $product = $this->product_model->get_info($id_product);
-            if(!$product){
+        private function _del($id, $redirect = true){
+            // lay ra thong tin tin tuc
+            $news = $this->news_model->get_info($id);
+            if(!$news){
                 // in ra thong bao loi
-                $this->session->set_flashdata('message', 'Không tồn tại sản phẩm này');
+                $this->session->set_flashdata('message', 'Không tồn tại tin tức này');
                 if($redirect){
-                    redirect (admin_url('product'));
+                    redirect (admin_url('news'));
                 }else{
                     return false;
                 }
             }
-            //  xoa anh san pham
-            $image_link = './upload/products/'.$product->image_link;
+            //  xoa anh dai dien
+            $image_link = './upload/tin-tuc/'.$news->image;
             if(file_exists($image_link)){
                 unlink($image_link);
             }
-            // xoa anh minh hoa kem theo cua san pham
-            $image_list = json_decode($product->image_list);
-
-            if(is_array($image_list)){
-                foreach ($image_list as $img){
-                    $image_list = './upload/products/'.$img;
-                    if(file_exists($image_list)){
-                        unlink($image_list);
-                    }
-                }
-            }
-            // thuc hien xoa san pham
-            $this->product_model->delete($id_product);
-
+            // thuc hien xoa tin tuc
+            $this->news_model->delete($id);
         }
     }

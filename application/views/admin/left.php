@@ -6,7 +6,7 @@
     <div class="sideProfile">
         <a href="#" title="" class="profileFace"><img src="<?php echo public_url(); ?>/admin/images/user.png" width="40"></a>
         <span>Xin chào: <strong>admin!</strong></span>
-        <span>Hoàng văn Tuyền</span>
+        <span><?php echo $admin_info->name;?></span>
         <div class="clear"></div>
     </div>
     <div class="sidebarSep"></div>
@@ -47,7 +47,7 @@
         </li>
         <li class="product">
 
-            <a href="admin/product.html" class=" exp">
+            <a href="" class=" exp">
                 <span>Sản phẩm</span>
                 <strong>3</strong>
             </a>
@@ -62,7 +62,7 @@
                         Danh mục							</a>
                 </li>
                 <li>
-                    <a href="admin/comment.html">
+                    <a href="">
                         Phản hồi							</a>
                 </li>
             </ul>
@@ -81,11 +81,11 @@
                         Ban quản trị							</a>
                 </li>
                 <li>
-                    <a href="admin/admin_group.html">
+                    <a href="">
                         Nhóm quản trị							</a>
                 </li>
                 <li>
-                    <a href="admin/user.html">
+                    <a href="">
                         Thành viên							</a>
                 </li>
             </ul>
@@ -93,18 +93,18 @@
         </li>
         <li class="support">
 
-            <a href="admin/support.html" class=" exp">
+            <a href="" class=" exp">
                 <span>Hỗ trợ và liên hệ</span>
                 <strong>2</strong>
             </a>
 
             <ul class="sub">
                 <li>
-                    <a href="admin/support.html">
+                    <a href="">
                         Hỗ trợ							</a>
                 </li>
                 <li>
-                    <a href="admin/contact.html">
+                    <a href="">
                         Liên hệ							</a>
                 </li>
             </ul>
@@ -112,7 +112,7 @@
         </li>
         <li class="content">
 
-            <a href="admin/content.html" class=" exp">
+            <a href="" class=" exp">
                 <span>Nội dung</span>
                 <strong>4</strong>
             </a>
@@ -128,11 +128,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="admin/info.html">
+                    <a href="#">
                         Trang thông tin							</a>
                 </li>
                 <li>
-                    <a href="admin/video.html">
+                    <a href="">
                         Video							</a>
                 </li>
             </ul>

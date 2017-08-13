@@ -190,7 +190,19 @@ $this->load->view('admin/product/head', $this->data);
                             <label class="formLeft">Nội dung:</label>
                             <div class="formRight">
                                 <textarea class="editor" id="param_content" name="content"></textarea>
+                                <script>
+                                    CKEDITOR.replace( 'param_content',{
+                                        filebrowserBrowseUrl : $('base').attr('href')+ 'public/ckfinder/ckfinder.html',
+                                        filebrowserImageBrowseUrl: $('base').attr('href')+ 'public/ckfinder/ckfinder.html?type=Images',
+                                        filebrowserFlashBrowseUrl: $('base').attr('href')+ 'public/ckfinder/ckfinder.html?type=Flash',
+                                        filebrowserUploadUrl: $('base').attr('href')+ 'public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+                                        filebrowserImageUploadUrl: $('base').attr('href')+ 'public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+                                        filebrowserFlashUploadUrl: $('base').attr('href')+ 'public/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+                                        }
+                                    );
+                                </script>
                                 <div class="clear error" name="content_error"><?php echo form_error('content'); ?></div>
+                                
                             </div>
                             <div class="clear"></div>
                         </div>

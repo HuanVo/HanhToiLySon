@@ -1,7 +1,7 @@
 <div class="topNav">
     <div class="wrapper">
         <div class="welcome">
-            <span>Xin chào: <b>admin!</b></span>
+            <span>Trang quản trị <?php echo base_url();?></b></span>
         </div>
 
         <div class="userNav">
