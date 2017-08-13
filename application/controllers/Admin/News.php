@@ -4,6 +4,7 @@
         {
             parent::__construct();
             $this->load->model('news_model');
+            
     }
         function index(){
             $total_rows =  $this->news_model->get_total();
@@ -71,7 +72,7 @@
             $this->data['temp'] = 'admin/news/index';
             $this->load->view('admin/main', $this->data);
         }
-        // Them mot san pham moi
+        // Them moi tin tuc
         function add(){
      
             // load thu vien validation
@@ -141,7 +142,7 @@
             $this->data['temp'] = 'admin/news/add';
             $this->load->view('admin/main', $this->data);
         }
-        // chinh sua san pham
+        // chinh sua tin tuc
         function edit(){
             // load ra thu vien validation
             $this->load->library('form_validation');
@@ -215,52 +216,38 @@
 
         }
         function delete(){
-            // lay ra id san pham
-            $id_product = $this->uri->rsegment('3');
-            $this->_del($id_product);
+            // lay ra id tin tuc
+            $id = $this->uri->rsegment('3');
+            $this->_del($id);
             // thong bao xoa thanh cong
-            $this->session->set_flashdata('message', 'Xóa thành công sản phẩm này');
-            redirect(admin_url('product'));
-
+            $this->session->set_flashdata('message', 'Xóa thành công tin tức này');
+            redirect(admin_url('news'));
         }
-        // xoa nhieu san pham
+        // xoa nhieu tin tuc
         function delete_all(){
             $ids = $this->input->post('ids');
-            foreach ($ids as $id_product){
-                $this->_del($id_product);
+            foreach ($ids as $id){
+                $this->_del($id);
             }
-
         }
-        private function _del($id_product, $redirect = true){
-            // lay ra thong tin san pham
-            $product = $this->product_model->get_info($id_product);
-            if(!$product){
+        private function _del($id, $redirect = true){
+            // lay ra thong tin tin tuc
+            $news = $this->news_model->get_info($id);
+            if(!$news){
                 // in ra thong bao loi
-                $this->session->set_flashdata('message', 'Không tồn tại sản phẩm này');
+                $this->session->set_flashdata('message', 'Không tồn tại tin tức này');
                 if($redirect){
-                    redirect (admin_url('product'));
+                    redirect (admin_url('news'));
                 }else{
                     return false;
                 }
             }
-            //  xoa anh san pham
-            $image_link = './upload/products/'.$product->image_link;
+            //  xoa anh dai dien
+            $image_link = './upload/tin-tuc/'.$news->image;
             if(file_exists($image_link)){
                 unlink($image_link);
             }
-            // xoa anh minh hoa kem theo cua san pham
-            $image_list = json_decode($product->image_list);
-
-            if(is_array($image_list)){
-                foreach ($image_list as $img){
-                    $image_list = './upload/products/'.$img;
-                    if(file_exists($image_list)){
-                        unlink($image_list);
-                    }
-                }
-            }
-            // thuc hien xoa san pham
-            $this->product_model->delete($id_product);
-
+            // thuc hien xoa tin tuc
+            $this->news_model->delete($id);
         }
     }
