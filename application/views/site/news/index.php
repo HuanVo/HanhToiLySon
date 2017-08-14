@@ -11,9 +11,9 @@
                     <div class="row">
                         <?php foreach ($news_pp as $row):?>
                         <div class="col-lg-12 col-sm-12 col-xs-12">
-                            <div class="blog-item">
-                                <figure class="blog-body image">
-                                    <img src="<?php echo base_url('upload').'/tin-tuc/'; echo $row -> image;?>" title="<?php echo $row->name; ?>" class="img-responsive" alt="<?php echo $row->name; ?>">
+                            <div class="blog-item" >
+                                <figure class="blog-body image" >
+                                    <center> <img src="<?php echo base_url('upload').'/tin-tuc/'; echo $row -> image;?>" title="<?php echo $row->name; ?>" class="img-responsive" alt="<?php echo $row->name; ?>"></center>
                                 </figure>
                                 <div class="row">
                                     <div class="blog-meta col-lg-3 col-md-3 col-sm-4 col-xs-12">

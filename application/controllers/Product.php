@@ -6,9 +6,27 @@
             $this->load->model('product_model');
             $this->load->helper('name_helper');
         }
+        
+        function allproduct(){
+            $total_rows = $this->product_model->get_total();
+            $this->data['total_rows'] = $total_rows;
+            $input = array();
+            $input['limit'] = array(10, 0);
+            //pre($this->uri->rsegment(3));
+            if($this->uri->rsegment(3)){
+                $lm = intval($this->uri->rsegment(3));
+                $input['limit'] = array($lm, 0);
+                $this->data['limit'] = $lm;
+            }
+            $list = $this->product_model->get_list($input);
+            $this->data['list'] = $list;
+            $this->data['temp'] = 'site/product/product';
+            $this->load->view('site/layout', $this->data);
+        }
+      
         function catalog(){
             //pre($this->data);
-            //  lay ra id danh muc san pham
+            //lay ra id danh muc san pham
             $this->load->model('catalog_model');
             $id_catalog = $this->uri->rsegment('3');
             $id_catalog = intval($id_catalog);
@@ -21,7 +39,6 @@
             // kiem tra co phai la danh muc cha hay ko
             $input = array();
             
-              
             if(intval($catalog_info->parent_id) == 0){
                 $input_catalog['where'] = array('parent_id' => $id_catalog);
                 $catalog_sub = $this->catalog_model->get_list($input_catalog);
@@ -37,7 +54,6 @@
                 $input['where'] = array('id_catalog' => $id_catalog);
             }
             // lay danh sach san pham
-            $this->load->model('product_model');
             $total_rows = $this->product_model->get_total($input);
             $this->data['total_rows'] = $total_rows;
             if($this->uri->rsegment('4')){

@@ -5,6 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 <meta charset="utf-8">
 <title>404 Page Not Found</title>
+<p>đường dẫn không tồn tại vui lòng kiểm tra lại hoặc quay về trang chủ</p>
 <style type="text/css">
 
 ::selection { background-color: #E13300; color: white; }

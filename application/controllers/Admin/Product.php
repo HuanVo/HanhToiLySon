@@ -4,7 +4,9 @@
         {
             parent::__construct();
             $this->load->model('product_model');
-    }
+        }
+        
+        
         function index(){
             $total_rows =  $this->product_model->get_total();
             $this->data['total_rows'] = $total_rows;
@@ -318,5 +320,6 @@
             $this->product_model->delete($id_product);
 
         }
+        
     }
 ?>

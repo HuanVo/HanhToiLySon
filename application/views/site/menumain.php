@@ -37,7 +37,7 @@
                                                                                                                              <!--menu parent-->
                                                                  <!--lv1-->
                                                                                                                                 <li class="parent dropdown aligned-left" id="main_menu1">
-                                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="">
+                                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="<?php echo base_url();?>san-pham">
                                                                             <span class="menu-title ">Sản Phẩm</span>
                                                                             <b class="caret"></b>
                                                                         </a>

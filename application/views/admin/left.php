@@ -62,7 +62,7 @@
                         Danh mục							</a>
                 </li>
                 <li>
-                    <a href="<?php echo admin_url(); ?>">
+                    <a href="<?php echo admin_url('feedback'); ?>">
                         Phản hồi							</a>
                 </li>
             </ul>

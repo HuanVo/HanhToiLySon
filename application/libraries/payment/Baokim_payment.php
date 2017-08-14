@@ -12,18 +12,16 @@ class BaoKim_payment{
 	// Thong so cai dat payment
 	var $code 		= 'baokim';
 	var $setting 	= array(
-		'business' 				=> 'sohuyn1996@gmail.com',//tai khoan cua nguoi nhan tien
-		'merchant_id' 			=> '23753',//id cua website khi dang ky ben baokim
-		'secure_pass' 			=> '37d3ba169180c345',//mat khau giao tiep
+		'business' 				=> 'huanoaz@gmail.com',//tai khoan cua nguoi nhan tien
+		'merchant_id' 			=> '30129',//id cua website khi dang ky ben baokim
+		'secure_pass' 			=> '2b2c8aaf8de2627e',//mat khau giao tiep
 		'cost_constant'			=> 1700,
 		'cost_percent'			=> 1,
 	);
-
 	// Cac bien giao tiep cua payment
 	var $url 		= 'https://www.baokim.vn/payment/customize_payment/order';	// URL chay that
 	//var $url 		= 'http://sandbox.baokim.vn/payment/customize_payment/order';	// URL chay test
-	var $ip			= array('210.245.80.14', '210.245.83.89', '210.245.83.94', '42.112.21.10',
-		'210.245.83.90', '210.245.80.104', '210.245.88.180', '210.245.83.82', '210.245.83.87'
+	var $ip			= array('192.168.0.10'
 	);
 
 	public function __construct()
