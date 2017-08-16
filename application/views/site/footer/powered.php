@@ -1,7 +1,7 @@
  <div class="container">
         <div id="top"><a class="scrollup" href="#" style="display: inline;"><i class="fa fa-angle-up"></i>Top</a></div>
         <div class="copyright pull-left">
-            Copyright &copy; HanhToiLySon <?php $now = getdate(); echo $now["year"] ?> . Thiết kế bởi <a target="_blank" href="huanit1237.blogspot.com">Võ Văn Huấn</a>.
+            Copyright &copy; HanhToiLySon <?php $now = getdate(); echo $now["year"] ?> . Thiết kế bởi <a target="_blank" href=""></a>.
         </div>
         <div class="paypal pull-right"></div>
     </div>

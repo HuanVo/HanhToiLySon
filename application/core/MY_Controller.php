@@ -12,12 +12,13 @@ class MY_Controller extends CI_Controller{
             case 'admin':
             {
                 $this->load->helper('admin');
-                
-            $admin_id_login = $this->session->userdata('login');
+                $admin_id_login = $this->session->userdata('id_admin_login');
+                echo $admin_id_login;
                 if($admin_id_login){
                     $this->load->model('admin_model');
-                    $user_info = $this->admin_model->get_info($admin_id_login);
-                    $this->data['admin_info'] = $user_info;
+                    $admin_info = $this->admin_model->get_info($admin_id_login);
+                    //pre($admin_info);
+                    $this->data['admin_info'] = $admin_info;
                 }
                 $this->check_login();
                 break;

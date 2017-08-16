@@ -26,14 +26,24 @@
                 'username' => $username,
                 'password' => $password,
             );
-
             if($this->admin_model->check_exists($where)){
+                $admin = $this->_get_admin_info($username,$password);
+                //pre($admin);
+                $this->session->set_userdata('id_admin_login', $admin->id_admin);
                 return true;
             }else{
                 // tao ra thong bao dang nhap ko thanh cong
                 $this->form_validation->set_message(__FUNCTION__, 'Đăng nhập không thành công');
                 return false;
             }
+        }
+        private function _get_admin_info($username, $password){
+            $where = array(
+                'username' => $username,
+                'password' => $password,
+            );
+            $admin = $this->admin_model->get_info_rule($where);
+            return $admin;
         }
 
     }
